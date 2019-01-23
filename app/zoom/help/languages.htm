@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Languages</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="languages,international languages,encoding,character sets,Unicode,UTF-8,accent characters,diacritic characters,ligature characters,single-case languages,substring matches for all searches,search page text,translate search page text,stemming,stemmer,plurals,derivative words,ZLANG file,ZLANG file selecting your ZLANG file to use" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?languages.htm"; }
+  else { parent.quicksync('a2.2.11'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Languages</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="autocomplete.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="weightings.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Zoom provides options to cater to searching sites of different languages and encodings. For additional information, please see “<a href="international__foreign_languag.htm">International / foreign language support</a>”.</p>
+<p class="p_Heading2"><span class="f_Heading2">Encoding and character sets</span></p>
+<p>This will be the encoding and character set (charset) of the resultant search page and index files. Zoom will scan files and convert the content from the character set specified on the web pages to the encoding selected here. Files which do not have a charset specified will be assumed to be the character set specified here.</p>
+<p>Change your settings regarding foreign language support and character encoding. Firstly, if your website uses Unicode UTF-8, you must enable the “Use Unicode” option. Otherwise, specify the encoding (also known as charset) used. “windows-1252” is the most common option for English, French, German, and a number of other Latin based languages.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Tip:</span><span class="f_Tip"> If you are indexing a single site (or several sites) where all the pages use the same charset, you should simply set this to be the same charset which is used on your website. However, if you are indexing web pages of varying character sets, we would recommend setting this to UTF-8 so that you can have a universal search page which will work with all the different languages. The content will be converted to Unicode before being indexed.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">International searching options</span></p>
+<p style="margin: 0px 0px 10px 24px;"><span style="font-weight: bold;">Enable accent/diacritic/ligature insensitivity</span>: This will map all occurrences of accented characters to their non-accented equivalent (eg. ó, ò, ô, etc. will all be treated as “o”). With this enabled, a user can enter the search word “cliché” and it will find all occurrences of the word on your website spelt as either “cliché” or “cliche". You can now specifically enable or disable this feature for accents (ó, ò, ô, õ, etc.), umlauts (ä, ë, ï, ö, ü), and ligatures (å, ø, æ). </p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Tip: </span><span class="f_Tip">Note that when this feature is enabled, and highlighting is also enabled, some words found in the context description may not be highlighted.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 10px 24px;">&nbsp;</p>
+<p style="margin: 0px 0px 10px 24px;"><span style="font-weight: bold;">Use digraphs for umlauts: </span>When this option is enabled together with umlaut insensitivity, characters like "ö" will be considered the same as "oe" as opposed to "o". Similarly, "ä"="ae", "ü"="ue", etc.</p>
+<p style="margin: 0px 0px 10px 24px;"><span style="font-weight: bold;">Support single-case languages (eg. asian languages)</span>: This should only be used if you are using a language where there is no case-difference and problems can occur when the script or indexer attempts to convert case (such as some East Asian languages).</p>
+<p style="margin: 0px 0px 10px 24px;"><span style="font-weight: bold;">Substring matches for all searches</span>: This will mean the script will consider search words that occurs within another word to be considered a match. (Eg. a search for the word “hot” will match “hotcake”, “shotgun”, etc.) This may be useful for East Asian languages where words are not distinguished by spaces and you always want to search for a single character within a set of words.</p>
+<p style="margin: 0px 0px 10px 24px;"><span style="font-weight: bold;">Strip Arabic diacritic marks in words</span>: This option will strip diacritical marks from Arabic words which are typically never searched for, and is only used to represent accurate pronunciation of the word.</p>
+<p class="p_Heading2"><span class="f_Heading2">Stemming</span></p>
+<p><span style="font-style: italic;">This option is not available in the JavaScript version.</span></p>
+<p>When this feature is enabled, search results will match similar words or words which are derivatives of each other (e.g. plurals). For example, searching for the word "fish" will return pages containing the words "fishes", "fishing", etc.</p>
+<p>The CGI version features an improved stemming feature which can be configured for languages other than English. PHP or ASP only supports English stemming. Stemming is not available when single-case matching (i.e. "Support single-case languages") is enabled.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note: </span><span class="f_Tip">If your website contains multi-lingual content (that is, your index will need to allow the searching of text in more than one language), then it may be best to disable stemming. The stemming algorithms are language specific, and will not work well when it is imposed on text of a different language.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Search page language</span></p>
+<p>You can modify the text that appears on the search page and search results, by customizing the Zoom Language Files (.ZLANG files). Almost every bit of text on the search page can be modified or translated, including “Search results for…” and “x results found”, etc. This allows you to translate the search page to the language of your choice, without having to modify the search script.</p>
+<p>Zoom also comes with a few pre-translated language files which both serve as examples, and allow you to create French or German search pages straight out of the box, by selecting it from the drop-down menu.</p>
+<p>For more information on how to create your own translations, please refer to “<a href="translating_the_search_page.htm">Translating the search page</a>”.</p>
+
+</td></tr></table>
+
+</body>
+</html>

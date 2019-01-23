@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Content filtering</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="content filtering,filtering files by content" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?content_filtering.htm"; }
+  else { parent.quicksync('a2.2.13'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Content filtering</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="weightings.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="config_categories.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Content Filtering allows you to filter out an entire page based on words found within the page's content. A list of filter words can be entered, prefixed with a "+" or a "-". You can specify positive filters (keywords beginning with a "+" character) which means that only pages with these words will be indexed, or you can specify negative filters (keywords beginning with a "-" character) meaning that pages containing these words will NOT be indexed.</p>
+<p>This can be useful for two reasons:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">1.</span></td><td>It helps if you want to create a specialised 'vertical' search engine. For example you could create a search engine about pets. In this case the word filter list might look like:<br>
+<span class="f_CodeExample">+dog</span><br>
+<span class="f_CodeExample">+cat</span><br>
+<span class="f_CodeExample">+bird</span><br>
+<span class="f_CodeExample">+mouse</span><br>
+<span class="f_CodeExample">+hamster</span><br>
+<span class="f_CodeExample">+pet</span></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">2.</span></td><td>You might want to avoid indexing some types of content. For example if you were building a religious search engine or a search engine for children, you might want to use negative filters: <br>
+<span class="f_CodeExample">-adult</span><br>
+<span class="f_CodeExample">-casino</span><br>
+<span class="f_CodeExample">-sex</span></td></tr></table></div><p>You can also filter out pages based on the URL by using the <a href="skip_options.htm">Skip options</a> by using the skip pages list. This method however, requires that you know the pages' URLs in advance, and manually determine which page has wanted or unwanted content. This is not always possible when indexing external sites, so content filtering solves this problem.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Tip:</span><span class="f_Tip"> Note that content based filtering will be less efficient than URL based filtering because each page must be downloaded before it can be filtered. With URL based filtering (using the "<a href="skip_options.htm">Skip pages</a>" list), the page can be discarded before it is downloaded, thus speeding up the indexing process. So URL filtering should still be used when possible.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p><span class="f_Tip">Content filtering is applied to the HTML source code of the page being scanned. This means that you can filter by HTML tags, for example:</span><br>
+<span class="f_CodeExample">-&lt;meta name="robots" content="noindex"&gt;</span><br>
+<span class="f_CodeExample">&nbsp;</span><br>
+<span class="f_Tip">However, note that this means that support for filtering by exact phrases is limited because the words may be broken up by HTML tags such as line breaks, comments, etc. (For example, it will not match if we are trying to filter out pages containing the phrase "adults only", and the page actually contains the HTML "</span><span class="f_CodeExample">adults&lt;br&gt;only</span><span class="f_Tip">").</span></p>
+
+</td></tr></table>
+
+</body>
+</html>

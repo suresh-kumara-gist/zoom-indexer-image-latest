@@ -1,0 +1,50 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Known issues</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="known issues,index.html issues,duplicate pages,same page,identical pages,session IDs,PDF layout problems,unsupported binary formats,long words,highlighting issues,exact phrases containing skipped words" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?known_issues.htm"; }
+  else { parent.quicksync('a8.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Known issues</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="discussion_forums.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="technical_limitations.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The following are some known issues, technical limitations and their possible solutions or workarounds. Note that we can provide custom development and support. So if you need a new feature, a work-around to a known issue, or some serious technical support, e-mail us at <a href="mailto:zoom@wrensoft.com" class="weblink">zoom@wrensoft.com</a> for a quotation.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>When given links (or a start URL in spider mode) without the filename (eg: http://mywebsite.com/), it may be indexed twice if there is another link somewhere else on the website which points to the same place, but with the actual filename specified (such as http://mywebsite.com/index.html, http://mywebsite.com/home.htm, etc.). &nbsp;To prevent this, use the "<a href="scan_options.htm#crc">Duplicate page detection</a>" option.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>When URLs with identical content are found using the "<a href="scan_options.htm#crc">Duplicate page detection</a>" option, only the first URL encountered will be indexed.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Spidering dynamic websites that utilise session IDs as part of their URL (as GET parameters) will vary in effectiveness depending on how the website uses the session information. There is no easy solution to identifying session IDs, so you will have to configure the indexer to scan accordingly, if you do not wish Zoom to index the parts of your website which require session information.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Some documents in PDF format may make use of complicated layouts such as columns, etc. This can confuse the indexer’s context descriptions (finding words from different columns but on the same line) and exact phrase matching. Try the alternate PDF scan mode (see "<a href="configuring_a_plugin.htm">Configuring a plugin</a>" for more information) if you are having this problem.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Very long words that have more that 35 characters in the word are split into two words in the index.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Highlighting may not work on some words with special accented characters.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>An exact phrase can not be matched if it begins with a skipped word. The user will get a message saying that the phrase is in the skipped word list.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>When “substring matching” is enabled, a skipped word may return results. For example, if the skipped word “of” is searched with this function, it may return results containing “office” or “often”. Note also that the highlighting feature may highlight occurrences of the word “of” in this case, despite it not being used as part of the searching criteria (i.e. the word was “skipped” in the indexing and searching, as intended).</td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

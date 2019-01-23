@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Enable jump to match and highlight within document</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="jump to match and highlight within document,highlight.js" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?jump_to_match_and_highlight.htm"; }
+  else { parent.quicksync('a7.9'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Enable jump to match and highlight within document</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="lastmodifieddate.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="search_statistics_script.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>You can setup highlighting to occur on the actual page of your website when you click on a search result. However, this requires you to add some Javascript to each page of your site where you want this feature to take effect. It will highlight the word that the user was looking for in the search engine, as well as scroll the window down to the first appearance of the word. </p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> This feature only works for HTML web pages, and does not work for Word, PDF, XLS and other document types. It also will not work for Javascript disabled browsers. For PDF documents, you can enable a similar behaviour within Acrobat Reader via the "Highlight and locate" option in the PDF plugin settings. See "<a href="configuring_a_plugin.htm">Configuring a plugin</a>" for more information.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>First, you must enable this option in the Configuration window (under the “<a href="results_layout.htm">Results Layout</a>” tab). </p>
+<p>Once you have enabled this option and re-indexed your website, you must locate the "highlight.js" file included with Zoom. This file can be found in the "extras" folder, which you can access from Zoom Indexer, by clicking on "Tools" in the menu and selecting the option to "Open 'Extras' folder" (also see "<a href="where_is_the_program_data_dire.htm">Where is the Program Data directory?</a>"). </p>
+<p style="text-align: center;"><img src="screenshot_tools_extras.gif" width="351" height="133" border="0" alt="screenshot_tools_extras" style="margin:0 auto;margin:0px;"></p>
+<p>Copy the "highlight.js" file from the "extras" folder to your website files, as you will need to link to the "highlight.js" file from each page of your site that requires the feature.</p>
+<p>For example, you could paste the following HTML in your site’s header or footer:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;style&nbsp;type="text/css"&gt;.highlight&nbsp;{&nbsp;background:&nbsp;#FFFF40;&nbsp;}&lt;/style&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;script&nbsp;type="text/javascript"&nbsp;src="highlight.js"&gt;&lt;/script&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>Note that you will need to specify the correct path to “highlight.js” depending on where the file is located relative to the page. You will then need to modify the BODY tag on your page to include an "onLoad" attribute, such as:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;body&nbsp;onload="highlight();"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>If for some reason you can not modify the body tag of your page, an alternative would be to put the following line after the &lt;/body&gt; tag of your page:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;script&nbsp;type="text/javascript"&gt;highlight();&lt;/script&gt;</span><br>
+Once&nbsp;you&nbsp;have&nbsp;successfully&nbsp;applied&nbsp;the&nbsp;above&nbsp;changes,&nbsp;you&nbsp;should&nbsp;find&nbsp;that&nbsp;clicking&nbsp;on&nbsp;a&nbsp;search&nbsp;result&nbsp;will&nbsp;go&nbsp;straight&nbsp;to&nbsp;the&nbsp;word&nbsp;found&nbsp;and&nbsp;all&nbsp;matching&nbsp;words&nbsp;will&nbsp;be&nbsp;highlighted.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Incremental indexing</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="incremental indexing,incremental indexing requirements,incremental indexing updating an existing index,incremental indexing add start points to existing index,incremental indexing add list of new or updated pages,incremental indexing view or delete pages from existing index,incremental indexing command-line parameters for incremental indexing,updating an existing index,add start points to existing index,add list of new or updated pages,view or delete pages from existing index" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?incremental_indexing.htm"; }
+  else { parent.quicksync('a2.10'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Incremental indexing</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="image_indexing.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="incremental_updating.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Zoom allows you to perform incremental indexing so that you can update, add pages, and make changes to an existing set of index files without having to perform a full re-index. This can be particularly useful for large sites (or an index of a large number of sites) where there may be minor incremental changes that require updates to the index, but would be too time consuming (or bandwidth consuming) to re-index the entire site using Spider mode on a regular basis.</p>
+<p class="p_Heading2"><span class="f_Heading2">Requirements</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">1.</span></td><td>Incremental indexing is only available for the PHP, ASP, ASP.NET, and CGI platforms. It is not available for the Javascript version since it is incapable of indexing a large enough set of files where incremental indexing would be beneficial.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">2.</span></td><td>In order to use incremental indexing, you must NOT have modified your indexing configuration since the last index was made. The ZCFG file must contain the exact same settings, and the index files must still be in the output folder specified.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">3.</span></td><td><span class="f_Tip">"</span><a href="incremental_updating.htm">Updating an existing index</a><span class="f_Tip">" is only available in <a href="spider_mode.htm">Spider Mode</a>. It is not available in <a href="offline_mode.htm">Offline Mode</a>. Offline mode indexing does not use any Internet traffic and it is many times quicker than spider mode, so this should not be necessary and we would recommend a full re-index for offline mode users.</span></td></tr></table></div><p class="p_Heading2"><span class="f_Heading2">Incremental indexing options</span></p>
+<p>The following options are available from the "Index" menu, by selecting "Incremental indexing":</p>
+<p><a href="incremental_updating.htm">Updating an existing index</a></p>
+<p><a href="incremental_addstartpts.htm">Add start points to existing index</a></p>
+<p><a href="incremental_addpages.htm">Add list of new or updated pages to existing index</a></p>
+<p><a href="incremental_delete.htm">View or delete pages from existing index</a></p>
+<p><a href="incremental_commandline.htm">Command-line parameters for incremental indexing</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

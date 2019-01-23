@@ -1,0 +1,57 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Specifying a last-modified date for your web pages</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="last-modified date" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?lastmodifieddate.htm"; }
+  else { parent.quicksync('a7.8'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Specifying a last-modified date for your web pages</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="alternative_page_titles_and_de.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="jump_to_match_and_highlight.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>You can configure Zoom to display the date and time for each search result and allow the user to sort their results chronologically (see section 2.3.2 and 2.3.6). This normally uses the last-modified date and time of the file according to the file system. However, this may not be very useful in cases such as dynamically generated web pages (where it would use the date and time of the server-side script as opposed to a date that is related to the content actually displayed).</p>
+<p>In these cases, you can specify your own last-modified date and time in the form of a “http-equiv” Meta tag such as the following:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;http-equiv="Last-Modified"&nbsp;content="Sat,&nbsp;07&nbsp;Apr&nbsp;2001&nbsp;00:58:08&nbsp;GMT"&gt;</span></p>
+<p>&nbsp;<br>
+Note that this is a standard Meta tag and would also be used by other spiders and applications. Note also that the exact syntax for specifying the date and time must be followed.  </p>
+<p>The expected format for the date value is:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">ddd,&nbsp;DD&nbsp;MMM&nbsp;YYYY&nbsp;HH:MM:SS&nbsp;[Timezone]</span><br>
+<span class="f_CodeExample">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>ddd is the first three letters corresponding to the day of the week (eg. “Mon”, “Tue”, …)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>DD is the day of the month in numerals</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>MMM is the first three letters for the name of the month (eg. “Jan”, “Feb”, …)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>YYYY is the year in numeral format (eg. 2005)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>HH:MM:SS is the time in hours, minutes, and seconds respectively. This must be specified in 24 hour time.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>[Timezone] is optional (eg. “GMT”, “GMT-5”). Note that Zoom will not perform any timezone conversions based on this.</td></tr></table></div>
+</td></tr></table>
+
+</body>
+</html>

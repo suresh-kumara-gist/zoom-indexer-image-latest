@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Skipping sections of a page</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="skipping sections of a page,ZOOMSTOP,ZOOMRESTART,ZOOMSTOPFOLLOW,ZOOMRESTARTFOLLOW" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?skipping_sections_of_a_page.htm"; }
+  else { parent.quicksync('a7.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Skipping sections of a page</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="editing_the_search_script.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="zoomwords.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Sometimes there are situations where you would want to stop a section of a page from being indexed. This may be common headers, footers, or navigation menus which appear on every page of your site. This can be accomplished by enclosing the unwanted section of the HTML document within the following tags: &lt;!--ZOOMSTOP--&gt; and &lt;!--ZOOMRESTART--&gt;. Note that this tag must be used as it is, in upper case, with no space characters within the tags. For example,</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;p&gt;This&nbsp;text&nbsp;will&nbsp;be&nbsp;indexed&lt;/p&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!--ZOOMSTOP--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;p&gt;This&nbsp;section&nbsp;is&nbsp;skipped&lt;/p&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;p&gt;and&nbsp;no&nbsp;indexing&nbsp;will&nbsp;occur&lt;/p&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!--ZOOMRESTART--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;p&gt;Indexing&nbsp;starts&nbsp;again&nbsp;here&lt;/p&gt;</span></p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> A </span><span class="f_CodeExample">&lt;!--ZOOMSTOP--&gt;</span><span class="f_Tip"> tag </span><span class="f_Tip" style="font-style: italic;">must </span><span class="f_Tip">be followed by a </span><span class="f_CodeExample">&lt;!--ZOOMRESTART--&gt;</span><span class="f_Tip"> tag somewhere later in the page for it to take effect. You also cannot have nested ZOOMSTOP tags. Zoom will simply skip starting from the ZOOMSTOP tag found, up to the first occurrence of ZOOMRESTART.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>This is often used to exclude navigation bars and menus. Note however, that the hypertext links within a ZOOMSTOP and ZOOMRESTART section would still be followed in Spider indexing mode.</p>
+<p>If you would like to stop the spider from following links, you can use the <span class="f_CodeExample">&lt;!--ZOOMSTOPFOLLOW--&gt;</span> and <span class="f_CodeExample">&lt;!--ZOOMRESTARTFOLLOW--&gt;</span> tags. Links within these tags would not be followed, but when used alone, the text would still be indexed.</p>
+<p>If you wish to skip a section of a page from being indexed AND from having its links followed, you should use both tags to enclose a section. For example:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;p&gt;This&nbsp;text&nbsp;will&nbsp;be&nbsp;indexed&lt;/p&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!--ZOOMSTOP--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!--ZOOMSTOPFOLLOW--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;p&gt;This&nbsp;section&nbsp;is&nbsp;skipped&nbsp;and&nbsp;&lt;a&nbsp;href=”test.html”&gt;this&nbsp;link&nbsp;will&nbsp;not&nbsp;be&nbsp;followed&lt;/a&gt;&lt;/p&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!--ZOOMRESTARTFOLLOW--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!--ZOOMRESTART--&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;p&gt;Indexing&nbsp;starts&nbsp;again&nbsp;here&lt;/p&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>Note that when you are using the two tags combined, you must specify the ZOOMSTOPFOLLOW tag within the ZOOMSTOP block, as shown in the above example. A ZOOMSTOP tag within a ZOOMSTOPFOLLOW block will be ignored.</p>
+
+</td></tr></table>
+
+</body>
+</html>

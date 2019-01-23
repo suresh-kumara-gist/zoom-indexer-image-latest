@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>How do I modify the search form on the search page?</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="modifying the search form,customizing search form" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?how_do_i_modify_search_form.htm"; }
+  else { parent.quicksync('a6.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">How do I modify the search form on the search page?</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="css_class_listing.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="how_can_i_add_a_search_form.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>If you wish to modify the search form, you can either edit the script, or define your own search form, with the following HTML form code:</p>
+<p><span style="font-style: italic;">If you wish to use your own search form, you may want to turn off the form displayed by the script from the Search Page configuration tab, under the Form Format setting. See ‘<a href="configuring_zoom.htm">Configuring Zoom</a>’ for more information.</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;form&nbsp;method="GET"&nbsp;action="search.php"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="text"&nbsp;name="zoom_query"&nbsp;size="20"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="submit"&nbsp;value="Search"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Results&nbsp;per&nbsp;page:&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;select&nbsp;name="zoom_per_page"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;selected&gt;10&lt;/option&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;&gt;20&lt;/option&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option&nbsp;&gt;100&lt;/option&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;br&gt;&lt;br&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Match:&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="radio"&nbsp;name="zoom_and"&nbsp;value="0"&nbsp;checked&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;any&nbsp;search&nbsp;words&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="radio"&nbsp;name="zoom_and"&nbsp;value="1"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;all&nbsp;search&nbsp;words&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&lt;/form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> You must change “search.php” in the above HTML to the appropriate search page: that is, “search.asp” for ASP users, “search.cgi” for CGI users, and “search.html” for Javascript users.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;<br>
+If you have categories enabled, and you wish to include the category drop-down boxes in your custom search form, then you will need to manually specify these categories in HTML. Because these options vary depending on your categories configuration, we can not provide the exact HTML you will require. The best method is to simply allow the search script to generate the full search form once, click on "View Source" in your browser and copy and paste the categories HTML required for your particular configuration.</p>
+
+</td></tr></table>
+
+</body>
+</html>

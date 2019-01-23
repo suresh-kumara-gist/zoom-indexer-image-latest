@@ -1,0 +1,186 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Spider options</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content=".DESC files,.DESC files use offline .desc files when indexing remote files,cache,check thumbnail exists,crawling JavaScript links,file:// URLs,JavaScript links,multiple threads,parsing JavaScript links,reload all files,robots.txt,single-threaded downloading,spider options,spider throttling,thumbnail checking" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?spider_options.htm"; }
+  else { parent.quicksync('a2.2.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Spider options</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="skip_options.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="search_page.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Heading2"><span class="f_Heading2">Spider downloading options</span></p>
+<p>These are options which control the way in which Zoom will download files when it is in spider mode. Note that it does not apply for offline mode indexing.</p>
+<p class="p_Heading2"><span class="f_Heading2">Single-threaded downloading</span></p>
+<p>This option uses only one dedicated thread for downloading files. This is typically the slower option but provides reasonable speed when indexing a site with a fast connection. It is also recommended when you are trying to follow the spider’s crawling path, to determine if it is scanning the pages you are expecting.</p>
+<p class="p_Heading2"><span class="f_Heading2">Multiple threads</span></p>
+<p>This option allows you to specify more than one dedicated thread for downloading files in spider mode. This is recommended to increase the speed of indexing. It allows Zoom to download multiple files in the background whilst indexing at the same time.</p>
+<p class="p_Heading2"><span class="f_Heading2">Reload all files (do not use cache)</span></p>
+<p>Check this option to ensure that all files are downloaded from the site and that the cached copies of pages are not used.</p>
+<p class="p_Heading2"><span class="f_Heading2">Spider throttling</span></p>
+<p>This option allows you to add or increase a delay between requests made to a web server when indexing in Spider Mode. This can be useful when you are crawling a web server which is under heavy load and you wish to minimize any additional load that can be placed on a server during the spidering process. Note that in most cases, the spider should not put much strain on a web server as it is limited by the bandwidth and processing capability of one single desktop computer. This option should only be necessary when indexing a server which is overloaded with an unreasonable number of websites or tasks, running on underpowered hardware. Using this option will significantly slow down your spider indexing process. For most other situations, we recommend setting this to "<span style="font-style: italic;">No delay between pages</span>".</p>
+<p class="p_Heading2"><span class="f_Heading2">Enable "robots.txt" support</span></p>
+<p>When this option is enabled, Zoom will look for "robots.txt" files when indexing a website in Spider Mode. The "robots.txt" file can specify instructions for spiders and other user-agents, on what pages should be excluded from indexing (similar in effect to the "<a href="skip_options.htm">Skip pages list</a>") and also whether a crawl delay should be required (similar in effect to the "<a href="spider_options.htm">Spider throttling</a>" option).</p>
+<p>Zoom will download a "robots.txt" file (if available) for each start point, so this method allows you to have per start point skip pages and throttling settings. It is also a good idea when indexing third party websites, so that you can make sure your spider is obeying the webmaster's rules.</p>
+<p>Note that Zoom will only locate a "robots.txt" file for each start point, at the root level of the domain being indexed. It will not parse "robots.txt" files which are located in sub-folders. This means you should have all your sub-folder robots settings located within the one "robots.txt" file, specifying your rules relative to the base URL.</p>
+<p>For example, the following "robots.txt" file will block Zoom from indexing any files in a folder named "secret" and any files named "private.html". It will also force a delay of 5 seconds between requests to this start point.</p>
+<p class="p_CodeExample"><span class="f_CodeExample">#&nbsp;this&nbsp;is&nbsp;my&nbsp;robots.txt&nbsp;for&nbsp;http://www.mysite.com/&nbsp;(this&nbsp;comment&nbsp;is&nbsp;ignored)</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">User-agent:&nbsp;ZoomSpider &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Disallow:&nbsp;/secret/&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Disallow:&nbsp;private.html</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">Crawl-delay:&nbsp;5</span><br>
+For&nbsp;more&nbsp;information&nbsp;on&nbsp;the&nbsp;"robots.txt"&nbsp;file&nbsp;format,&nbsp;please&nbsp;refer&nbsp;to&nbsp;online&nbsp;resources&nbsp;such&nbsp;as&nbsp;<a href="http://www.robotstxt.org/" target="_blank" class="weblink">http://www.robotstxt.org/</a></p>
+<p>When this option is enabled, Zoom will also support the "robots" meta tag for "noindex" and "nofollow". This allows you to specify certain pages to be excluded from indexing (or crawled for links) by simply adding a tag such as the following within the page head:</p>
+<p><span class="f_CodeExample">&lt;meta name="robots" content="noindex,nofollow"&gt;</span></p>
+<p>Note that specifying "index" or "follow" values in the robots meta tag will have no effect as this is the default behaviour for all pages scanned. </p>
+<p class="p_Heading2"><span class="f_Heading2">Parse for links in JavaScript code</span></p>
+<p>Some links on your web page may be embedded within JavaScript code (e.g. pop-up navigation menus). These links are generally considered to be search engine unfriendly, because a web spider is unable to execute the script and crawl the resulting links. </p>
+<p>While Zoom will not execute JavaScript, this option asks Zoom to attempt to look for URLs within the JavaScript code and crawl/follow any valid links that it finds. This will typically find some of the links in your JavaScript but not necessarily all of them. It also increases the time it takes to index a web page. However, it can be a decent solution if you have many links within JavaScript code and do not have the time to fix your web page to be more search engine friendly. </p>
+<p>You can find more information on indexing JavaScript links and better long-term solutions explained in our online FAQ here: <a href="http://www.wrensoft.com/zoom/support/faq_problems.html#javascriptmenus" target="_blank" class="weblink">http://www.wrensoft.com/zoom/support/faq_problems.html#javascriptmenus</a></p>
+<p class="p_Heading2"><span class="f_Heading2">Scan files linked via “file://” URLs in spider mode</span></p>
+<p>This allows the spider mode to follow file:// style hypertext links. This can be useful for indexing an Intranet where you may have accessible files on the web server as well as the shared drives on the network.</p>
+<p class="p_Heading2"><span class="f_Heading2">Check thumbnails exist on website before using URL</span></p>
+<p>This option applies for search result thumbnails configured as described in "<a href="icons_and_thumbnails.htm">Icons and thumbnails</a>".</p>
+<p>With this option enabled, Zoom will check each thumbnail URL and see if the image file exists on the web server (at the time of indexing) before deciding to use the determined URL for the thumbnail. This prevents "broken image" thumbnails.</p>
+<p class="p_Heading2"><span class="f_Heading2">Use offline folder for .desc files</span></p>
+<p>This option allows you to specify custom description (.desc) files for your plugin supported files, by hosting them locally in an offline folder.</p>
+<p>It allows you to override incorrect meta data on remotely hosted files (possibly on sites that you can not change, or where you do not wish to host the .desc files). For more information on .desc files, see "<a href="using_desc_files.htm">Using custom descriptions (.desc) files</a>".</p>
+<p>With this setup, you can now index external sites using Spider Mode, and and the Indexer will look for the .desc files for any plugin supported file formats (such as .pdf, .doc, etc.) in the local directory. This allows you to specify custom .desc files without having to host them up on the remote web site.</p>
+<p>The offline .desc files need to include the full domain name and URL path in its filename. This is usually everything after the "http://" or "https://" prefix. It must also end in ".desc" (see examples below).</p>
+<p>However, since a number of characters possible in a URL are not valid as filenames, you must encode these characters in their hexadecimal form and precede them with a "%" sign. This is similar to the HTTP encoding required for URLs. The following is a list of the characters in URL which must be encoded.</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table align="center" cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; height:18px; border: solid 1px #808080;"><p style="text-align: center;"><span style="font-weight: bold;">Character</span></p>
+</td>
+<td valign="top" width="110" style="width:110px; height:18px; border: solid 1px #808080;"><p style="text-align: center;"><span style="font-weight: bold;">Encoded</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">\</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%5C</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">/</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%2F</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">:</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%3A</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">*</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%2A</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">?</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%3F</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">"</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%22</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">&lt;</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%3C</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">&gt;</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%3E</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="81" style="width:81px; border: solid 1px #808080;"><p style="text-align: center;">|</p>
+</td>
+<td valign="top" width="110" style="width:110px; border: solid 1px #808080;"><p style="text-align: center;">%7C</p>
+</td>
+</tr>
+</table>
+</div>
+<p>For each of the above characters in a URL, substitute them with the Encoded form of the character when naming a .desc file for that URL.</p>
+<p>Here are some examples of URLs and their corresponding .desc filenames,</p>
+<p style="text-align: center;"><span style="font-weight: bold;">Example 1</span>,</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table align="center" cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="127" style="width:127px; height:11px; border: solid 1px #808080;"><p style="margin: 0px 0px 0px 0px;">URL:</p>
+</td>
+<td valign="top" width="324" style="width:324px; height:11px; border: solid 1px #808080;"><p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">http://www.mysite.com/files/mydocument.pdf</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="127" style="width:127px; border: solid 1px #808080;"><p style="margin: 0px 0px 0px 0px;">.desc filename:</p>
+</td>
+<td valign="top" width="324" style="width:324px; border: solid 1px #808080;"><p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">www.mysite.com%2Ffiles%2Fmydocument.pdf.desc</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="text-align: center;"><span style="font-weight: bold;">Example 2</span>,</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table align="center" cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="127" style="width:127px; height:8px; border: solid 1px #808080;"><p style="margin: 0px 0px 0px 0px;">URL:</p>
+</td>
+<td valign="top" width="354" style="width:354px; height:8px; border: solid 1px #808080;"><p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">http://www.mysite.com/download.php?fileid=123</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="127" style="width:127px; border: solid 1px #808080;"><p style="margin: 0px 0px 0px 0px;">.desc filename:</p>
+</td>
+<td valign="top" width="354" style="width:354px; border: solid 1px #808080;"><p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">www.mysite.com%2Fdownload.php%3Ffileid=123.desc</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>Of course the prefered solution would be to create documents with correct meta data in the first place. But when this hasn't been done, local .desc files can provide more accurate searches and better looking results.</p>
+
+</td></tr></table>
+
+</body>
+</html>

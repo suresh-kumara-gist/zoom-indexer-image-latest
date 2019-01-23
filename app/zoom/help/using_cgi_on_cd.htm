@@ -1,0 +1,79 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Using the CGI or PHP version without a web server</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="server-side search engine,server-side search engine when to use,server-side search engine using cgi or php version without a web server" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?using_cgi_on_cd.htm"; }
+  else { parent.quicksync('a4.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Using the CGI or PHP version without a web server</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="limitations_of_javascript.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="what_to_do_after_indexing.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>While Javascript is a good solution for distributing small sites on CD it is limited in what it can do. Most notably, the Javascript version can not handle large volumes of data and struggles with sites of up to 100,000+ (this can depend on the browser used).</p>
+<p>The CGI version can handle much greater volumes of data, and also offers additional functionalities such as exact phrase searching and "Google-like" context search results. </p>
+<p>The solutions below apply to CD's, DVD's, USB drives and memory sticks. The process is the same in each case despite the media being different. Each of these options require the Zoom Search Engine.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Tip:</span><span class="f_Tip"> You can find a solution comparison table (and more information) on our online support page for this topic here:</span><br>
+<span class="f_Tip"><a href="http://www.wrensoft.com/zoom/support/faq_CD_search.html" target="_blank" class="weblink">http://www.wrensoft.com/zoom/support/faq_CD_search.html</a></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>The available options are as follows:</p>
+<p class="p_Heading2"><span class="f_Heading2">Use our FlyingAnt web server on a CD with the CGI option</span></p>
+<p>FlyingAnt is a product we have developed that allows you to run CGI's directly off a CD/DVD. It is the most powerful and flexible solution of the ones listed here, allowing you to create a CD with all the search capabilities available in Zoom and your CD will work for all browsers, as well as cross-platform support for your audience on Windows, Mac OSX, and most Linux distributions.</p>
+<p>See the FlyingAnt website for more information: <a href="http://www.wrensoft.com/flyingant/index.html" target="_blank" class="weblink">http://www.wrensoft.com/flyingant/index.html</a></p>
+<p class="p_Heading2"><span class="f_Heading2">Use the Zoom Javascript option to fully run the search in a browser</span></p>
+<p>This is <a href="client_side_search_engine.htm">default Javascript option</a> described in the rest of this chapter. It is the least capable due to the technical limitations of the JavaScript platform, but the most convenient. It requires no additional software or setup, and will run in any modern web browser.</p>
+<p class="p_Heading2"><span class="f_Heading2">Use third party IE plugin DLL to use the ASP scripting language on a CD. </span></p>
+<p>There are third party solutions available to running ASP scripts on a CD. These include packages such as the HSP (HTML Scripting Pages). You may prefer this option if you have other ASP scripts that you wish to serve on the CD along with Zoom. For more information, visit our online support page here: <a href="http://www.wrensoft.com/zoom/support/aspcd.html" target="_blank" class="weblink">http://www.wrensoft.com/zoom/support/aspcd.html</a></p>
+<p class="p_Heading2"><span class="f_Heading2">Use third party webserver software to use the PHP or CGI scripting language on a CD. </span></p>
+<p>There are third party solutions available to running PHP scripts on a CD. These include packages such as Server2Go. You may prefer htis option if you have other PHP scripts that you wish to serve on the CD along with Zoom. For more information, visit our online support page here: <a href="http://www.wrensoft.com/zoom/support/cgicd.html" target="_blank" class="weblink">http://www.wrensoft.com/zoom/support/cgicd.html</a></p>
+<p class="p_Heading2"><span class="f_Heading2">Use our free Zoom Front End software on a CD with the CGI option. </span></p>
+<p>For advanced software developers, we provide a sample C/C++ project with source code to demonstrate how to use the CGI within a C/C++ application and execute this off a CD-ROM or DVD-ROM without any web server. </p>
+<p>The project also comes with a compiled sample Front End for Windows. You can take the binary Front End application and use this in your distribution, or modify the source code and compile your own Front End application.</p>
+<p>Due to the technical nature of the project files, we would recommend this option only for more experienced programmers. For more information, and download links, visit the web page here: <a href="http://www.wrensoft.com/zoom/support/cgifrontend.html" target="_blank" class="weblink">http://www.wrensoft.com/zoom/support/cgifrontend.html</a></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

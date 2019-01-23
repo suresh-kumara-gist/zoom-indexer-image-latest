@@ -1,0 +1,95 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Authentication</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="authentication,authentication HTTP authentication,authentication cookie or session based authentication,login,logout,use cookies from Windows and IE,form action,hidden parameters,username,password,sessions,cookies,automatic login" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?authentication.htm"; }
+  else { parent.quicksync('a2.2.8'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Authentication</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="limits.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="config_ftp.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>This tab allows you to enter login and password details to spider a secure site that requires authentication. </p>
+<p>There are two common implementations of authentication on websites:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">(1)</span></td><td>HTTP authentication</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">(2)</span></td><td>Cookie/session based authentication</td></tr></table></div><p>You will need to identify the type of authentication you require.</p>
+<p class="p_Heading2"><span class="f_Heading2">HTTP authentication</span></p>
+<p>HTTP authentication usually appears as a special login window (when you access the page in your browser) and is a standardised method of authenticating over HTTP, implemented by the web server.</p>
+<p style="text-align: center;"><img src="httpauth.gif" width="326" height="289" border="0" alt="httpauth" style="margin:0 auto;margin:0px;"><br>
+<span style="font-style: italic;">Example 1. A typical website with HTTP authentication accessed via Internet Explorer</span></p>
+<p>&nbsp;<br>
+If your website uses HTTP authentication, you can simply enter your login information into Zoom (under the "Authentication" tab of the Configuration window) and the spider will automatically login when required and index the protected parts of your website.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> Authentication information is saved in the ZCFG file when you select Save configuration from the file menu. The password is obfuscated, but not heavily encrypted. For sites with security sensitive information, we recommend creating a special user account for indexing on the web server where possible, so you can disable this user account after indexing.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Cookie or session based authentication</span></p>
+<p>Cookie-based authentication however, usually appears as a form on a page, and is implemented by server-side scripts (such as PHP or ASP or Cold Fusion).</p>
+<p style="text-align: center;"><img src="cookieauth.gif" width="364" height="343" border="0" alt="cookieauth" style="margin:0 auto;margin:0px;"><br>
+<span style="font-style: italic;">Example 2. A typical website with cookie-based (or session-based) authentication</span></p>
+<p>&nbsp;<br>
+Zoom now provide a way to automatically login such pages. To do so you will need to provide the following information and settings:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Use cookies from Windows and IE</span>: This option enables cookie support in Zoom. You will need to check this option to access cookie-based authentication websites. Note that Zoom uses Windows' internal cookie cache (as part of WinInet) which means that it shares cookies with Internet Explorer.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Automatic login on following page (URL)</span>: Here, you should specify the URL to the page containing the login form. Using the example above (Example 2 screenshot), this would be "http://www.mysite.com/secure/login.php". On this page, the HTML for the form may look like the following:<br>
+&nbsp;<br>
+<span class="f_CodeExample">&lt;form action="?op=login" method="POST"&gt;</span><br>
+<span class="f_CodeExample">Login: &lt;input name="username" size="15"&gt;&lt;br&gt;</span><br>
+<span class="f_CodeExample">Password: &lt;input type="password" name="pass" size="8"&gt;&lt;br&gt;</span><br>
+<span class="f_CodeExample">&lt;input type="hidden" name="secret" value="handshake"&gt;</span><br>
+<span class="f_CodeExample">&lt;input type="submit" value="Login"&gt;</span><br>
+<span class="f_CodeExample">&lt;/form&gt;</span><br>
+<span class="f_CodeExample">&nbsp;</span><br>
+It is important to look at the HTML for the login form because you will need the name for the login variable and the password variable in the next steps.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Login variable name</span>: This is the name of the login input text box. That is, it is the part after "name=" for the input tag where you will enter your login. In the above HTML example, this would be "username".</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Your login</span>: This is the actual login you would be typing into the text box normally. In the above example, this would be "bob".</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Password variable name</span>: This is the name of the password input text box. It would be the part after "name=" for the input tag where you enter your password. In the above HTML example, this would be "pass".</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Your password</span>: This is the actual password you would be typing into the text box.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Additional parameters (if required)</span>: Some web sites require more than just an user name and password to be submitted to login. They may want the name of the button you've clicked on because the form has multiple "submit" buttons (e.g. "Login", "Sign up", "Recover lost password"). In such cases, you would need to specify the additional parameters required in this field. The parameter should be specified in the format of HTTP GET parameters, that is: <span class="f_CodeExample">parameterName=parameterValue</span> with the ampersand character (&amp;) joining multiple values. For example,<br>
+<span class="f_CodeExample">submitButton=Login&amp;hiddenParam=1</span></td></tr></table></div><p>Note that the automatic login process will submit these values to the action= URL specified for the form. It will also pass along any hidden variables within that form as they are often also required by the login process.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Remember:</span><span class="f_Tip"> If you are using one of the above methods to allow the spider to login to your cookie or session-based authenticated site, you need to make sure that the spider does not follow a link to the "logout" page, subsequently logging itself out of your website. You can prevent this by simply specifying the logout page in the "<a href="skip_options.htm">Skip pages and folder list</a>" (in the Configuration window, under the "Skip options" tab), eg. "logout.asp" or "&amp;logout=1", etc.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">When automatic login will not work</span></p>
+<p class="p_Heading2"><span class="f_Tip">Automatic login may not work on some sites or forums with anti-spider/anti-bot mechanisms that prevent exactly this type of automatic logins (they are usually put in place to avoid spam bots). In such cases, you will need to manually login with Internet Explorer. While making sure you have "Use cookies from Windows and IE" enabled in Zoom. </span>With this feature enabled, you can login to your website using IE, and then (without logging out first), start indexing in spider mode. The spider would be authenticated with the required cookie due to the shared cookie cache. </p>
+
+</td></tr></table>
+
+</body>
+</html>

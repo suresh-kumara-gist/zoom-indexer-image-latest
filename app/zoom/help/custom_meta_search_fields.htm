@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Custom Meta Search Fields</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="cents,Currency,custom meta field,database,Drop-down text,e-shop,exact match,greater than,greater than or equal to,inventory,less than,less than or equal to,meta field,Money,Multi-select,Numeric,Search criteria name,shop,Text" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?custom_meta_search_fields.htm"; }
+  else { parent.quicksync('a2.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Custom Meta Search Fields</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="categories.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="date_range_searching.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>You can specify custom meta fields that you want Zoom to index and make searchable. This is typically useful for online shops and web sites where a database-like search criteria is necessary.</p>
+<p>For example, you may have a real estate website with the following meta tags in a HTML file:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="NUMROOMS"&nbsp;content="1"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="PRICE"&nbsp;content="300000"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="SUBURB"&nbsp;content="Sydney"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="AGENT"&nbsp;content="Bob&nbsp;McGuinn"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>Note that these tags must be in the &lt;head&gt; ... &lt;/head&gt; section of the page for them to be valid meta tags according to HTML standards.</p>
+<p>By configuring Zoom's Custom Meta Fields feature, you can index this information (along with the actual page content) and make this searchable as seen below.</p>
+<p style="text-align: center;"><img src="custommetasearch.gif" width="409" height="309" border="0" alt="custommetasearch" style="margin:0 auto;margin:0px;"></p>
+<p>They will also appear alongside each search result which has the meta fields specified.</p>
+<p>To index these tags, you would create entries such as the following in the Zoom "Custom Meta Fields" configuration window:</p>
+<p>Meta name: <span style="font-style: italic;">NUMROOMS</span><br>
+Type: <span style="font-style: italic;">Numeric</span><br>
+Show in Search Results as: <span style="font-style: italic;">Number of rooms </span><br>
+Search criteria name: <span style="font-style: italic;">Min. number of rooms </span><br>
+Search criteria method: <span style="font-style: italic;">Greater than or equal to</span></p>
+<p style="text-align: center;"><img src="editcustommeta_linux.zoom60.png" width="548" height="503" border="0" alt="editcustommeta_linux" style="margin:0 auto;margin:0px;"></p>
+<p class="p_Heading2"><span class="f_Heading2">Meta names</span></p>
+<p>The "Meta name" field is only used to identify the meta tag by the Indexer. It will not be seen by the end-user. By HTML standards, the name of a meta tag cannot contain spaces but it can contain underscore characters (e.g. "NUM ROOMS" is not okay, but "NUMROOMS" and "NUM_ROOMS" is acceptable). This will match against a HTML tag such as: &lt;meta name="NUMROOMS" content="4"&gt;.</p>
+<p>The field name that appears to the end user is defined by "Show in Search Results as" (which defines how it appears within each search result in the listing) and "Search criteria name" (which defines how it appears in the generated search form). So you can use a more verbose and user-friendly naming convention here, including space characters (e.g. "Number of rooms")</p>
+<p class="p_Heading2"><span class="f_Heading2">Data Types</span></p>
+<p>Each custom meta field needs to be specified as a certain data type. This affects the way in which the value will be indexed, and also how it can be searched for by the end user.</p>
+<p>The following data types are available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Numeric</span> <br>
+This is a numeric integer value which you can match by: exact match, or less than/greater than comparison. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Text</span><br>
+This is a text value suited to names, product codes, etc. The search criteria available are "Exact match" and "Partial (substring) text matching".</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Drop-down text</span><br>
+This is a pre-determined set of text values as specified in the "Dropdown values" list. The values in your meta tags must match the ones in the list for them to be recognized. On the search page, the end user will be provided with a dropdown box to select one of these possible values to search by.<br>
+&nbsp;<br>
+<img src="editcustommetadropdown.gif" width="448" height="416" border="0" alt="editcustommetadropdown"></td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Multi-select</span><br>
+This is similar to the Drop-down text option, however it allows for multiple selections, while Drop-down text only allows for one value to be selected and specified per page. Multi-select also allows you to specify multiple meta values on the same page. For example, a book item may belong to multiple genres, and have the following meta values:<br>
+&nbsp;<br>
+<span class="f_CodeExample">&lt;meta name="GENRE" content="Sci-fi"&gt;</span><br>
+<span class="f_CodeExample">&lt;meta name="GENRE" content="Horror"&gt;</span><br>
+<span class="f_CodeExample">&nbsp;</span><br>
+As with the drop-down text option, you must have these values specified in the list for them to be recognized and supported.<br>
+&nbsp;<br>
+The multi-select box on the search form is a standard HTML multi-select box. It requires the end user to hold down the CTRL button to select multiple options.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td><span style="font-weight: bold;">Money</span><br>
+A money meta field allows you to specified a monetary value. Clicking on the "Configure" button next to the data type allows you to specify the Currency unit which will be displayed next to the value in the search results. You can also configure whether you want decimals/cents to be displayed and indexed. The meta values on your page should look something like this:<br>
+&nbsp;<br>
+<span class="f_CodeExample">&lt;meta name="PRICE" content="9.99"&gt;</span></td></tr></table></div><p>&nbsp;<br>
+You can customize the appearance of the meta fields via CSS. This includes the way the meta fields are displayed alongside each search result, as well as the search form from which you specify the meta field search criteria. A class listing of the CSS styles can be found in "<a href="css_class_listing.htm">CSS class listing</a>".</p>
+
+</td></tr></table>
+
+</body>
+</html>

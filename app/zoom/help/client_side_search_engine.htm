@@ -1,0 +1,58 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Client-side search engine (Using JavaScript)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="client-side search engine,client-side search engine when to use,client-side search engine how it works" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?client_side_search_engine.htm"; }
+  else { parent.quicksync('a4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Client-side search engine (Using Javascript)</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="installing_the_asp_net_native_.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="files_required_js.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Heading2"><span class="f_Heading2">When to use</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>When you intend to distribute the search engine on a CD-ROM or DVD, or any local Intranet where there is no running web server.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>When your web server does not support PHP or ASP, or provide CGI executable access.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>When your website is hosted on an intranet or local web server, where traffic and network latency is not an issue.</td></tr></table></div><p class="p_Heading2"><span class="f_Heading2">For CD-ROM or DVD searching</span></p>
+<p>If you wish to put the search engine on a CD-ROM or DVD distribution, you will need to use the client-side (Javascript) search option. This is because it is usually not practical to run a web server off a CD or DVD and also since the client-side search script is more convenient in that it only requires the search files (see "<a href="files_required_js.htm">Files required</a>") and a web browser. However, note that the capabilities of Javascript are much more limited, and many features available to server-side scripting are not available (such as context descriptions and exact phrase matching).</p>
+<p>If the capabilities and limitations of the Javascript option do not meet your requirements, you should consider running the CGI search script with a specialised web server on the CD. This would require additional software. For more information, see "<a href="using_cgi_on_cd.htm">Using the CGI or PHP version without a web server</a>”.</p>
+<p class="p_Heading2"><span class="f_Heading2">How it works</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Works regardless of web server platform. Can be used online, or to provide offline searching running off a local disk, CD-ROM, hard disk, etc.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Search queries are processed on the user’s computer.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Performance depends on the user’s computer, browser, and network connection.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Requires the entire index data to be loaded onto the user’s computer.</td></tr></table></div><p><img src="clientside.gif" width="514" height="220" border="0" alt="clientside"></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">(1)</span></td><td>All index data must be transferred and loaded onto the computer of the user performing the search query. This is not an issue if we were running the search off a CD-ROM or a local Intranet server, but can be extremely slow and traffic heavy if it is hosted on an Internet web server. Note that, in this context, we are not referring to the need for a user to click on a file and select “download”, but that the files will be automatically downloaded when a user visits the page (costing bandwidth and download time), much like how a big image on your web page can make it load slower.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">(2)</span></td><td>The search query is processed on the user’s computer.</td></tr></table></div><p class="p_Heading2"><span class="f_Heading2">See also:</span></p>
+<p><a href="files_required_js.htm">Files required for Javascript</a><br>
+<a href="limitations_of_javascript.htm">Limitations of Javascript</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

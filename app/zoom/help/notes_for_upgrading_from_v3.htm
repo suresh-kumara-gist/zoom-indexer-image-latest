@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Notes for users upgrading from Zoom 3.x</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?notes_for_upgrading_from_v3.htm"; }
+  else { parent.quicksync('a8.7'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Notes for users upgrading from Zoom 3.x</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="notes_for_upgrading_from_v4.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="contacting_us.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Users upgrading their sites and indexing configurations from Zoom 3.x should note some significant differences with the use of template files.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>The Indexer will no longer overwrite the “search_template.html” (or “search.html”) file in the output directory IF the file already exists. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>You should NOT modify “search_template_src.html” and “search_src.html” in the Zoom installation folder. You should now only need to modify the search template file in the OUTPUT directory (where the index files are written to). </td></tr></table></div><p>All existing users should allow Zoom to overwrite the “search_template_src.html” and “search_src.html” files found in the Zoom installation folder (usually “C:\Program Files\Zoom Search\scripts\...”). Backup your customized version of these files, if necessary, before hand.</p>
+<p>The new method of how you should go about changing the search template is as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">1.</span></td><td>When you index a site for the first time, Zoom will create a copy of the default template in the output directory. The default templates are the “search_template_src.html” and “search_src.html” files (which you should no longer modify).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">2.</span></td><td>Subsequent indexing sessions will NOT overwrite the search template in the output directory. This means that you can make your modifications to the search template file directly, and save your changes to the output directory.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">3.</span></td><td>You no longer need to manage multiple “Custom search template paths” in the Advanced configuration tab. You simply have different search templates in different output folders.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">4.</span></td><td>When a search template file is missing in the output directory, Zoom will create a copy of the default template there the next time it indexes. This means that, if you need to return to the default template at any point, you can delete or rename your template in the output directory, and re-index.</td></tr></table></div><p>It is recommended to start with a fresh new default search template from Version 5.0 and adapt that to the look of your 3.x template. This means you should index once to an empty directory, so that it creates the default template file for you to use as a reference. There have been some changes with new stylesheet classes defined, and more importantly for the Javascript version, it now needs to link to different script (.js) files than before.</p>
+
+</td></tr></table>
+
+</body>
+</html>

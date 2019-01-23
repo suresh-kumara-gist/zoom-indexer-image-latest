@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>How do I customize the look of my search page?</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="customizing search page,layout,appearance of search page" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?how_do_i_customize_the_look.htm"; }
+  else { parent.quicksync('a6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">How do I customize the look of my search page?</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="where_is_my_search_page.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="customizing_the_search_form.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>You can completely alter the appearance of the search page, from changing the fonts and layout to including headers, footers or site navigation menus.</p>
+<p>The following is a screenshot of how your search page will look by default after indexing and uploading (before any customisations have been made). </p>
+<p style="text-align: center;"><img src="screenshot_results2.gif" width="412" height="385" border="0" alt="screenshot_results2" style="margin:0 auto;margin:0px;"></p>
+<p>First, you will need to have indexed your site successfully. If so, a default search template file should have been created in the output directory (alongside the index files). This is a normal HTML file that can be edited like any other ordinary web page with your favourite web page editor. </p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> the search template file is named “search_template.html” for the PHP, ASP, and CGI versions. For the Javascript version, it is named “search.html”.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>You can also open this file from the Indexer, by clicking on the “Templates” menu, and selecting “Customize search page appearance”.</p>
+<p style="text-align: center;"><img src="screenshot_customize.gif" width="490" height="104" border="0" alt="screenshot_customize" style="margin:0 auto;margin:0px;"></p>
+<p>This will open up the HTML search template in your default HTML editor. Alternatively you can select a different editor to modify the template with. <span style="font-style: italic;">Note that you should not use MS Word to edit the template file due to known problems with Word’s support for HTML editing* </span>(see “<a href="changing_your_default_editor.htm">Changing your default editor for templates</a>”).</p>
+<p>You can modify this page as you see fit, however, you must retain the following "tag" in place of where you want the search function to be displayed:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;!--ZOOMSEARCH--&gt; &nbsp; &nbsp; &nbsp; &nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>This is different for the JavaScript version, which uses the following line instead: </p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;script&nbsp;language="JavaScript"&gt;ZoomSearch();&lt;/script&gt;</span><br>
+<span class="f_CodeExample">&nbsp;</span></p>
+<p>If you need to go back to the default search template, you can delete or rename your search template file, and re-index your site. A new “default template” will be created in the output directory at the end of indexing, when it finds that the search template is missing.</p>
+<p>To change the fonts, colours, and appearance of your search results (everything after the search form), edit the CSS styles defined at the top of the template HTML file. These styles are listed in "<a href="css_class_listing.htm">CSS class listing</a>".</p>
+<p class="p_Tip" style="border-right: none; border-left: none;"><span class="f_Tip" style="font-weight: bold;">If you are not familiar with CSS (Cascading Style Sheets)</span><span class="f_Tip">, you can look up more information on attributes and definitions you can use to alter everything from margins, font sizes, background images, and more. There are many tutorials and websites online (search for “CSS tutorial” on Google). </span><br>
+<span class="f_Tip">&nbsp;</span><br>
+<span class="f_Tip">Just by changing this search template file, the appearance of your search page can be completely changed. The following screenshot is an example of a customized search page. See our website at <a href="http://www.wrensoft.com/zoom/" target="_blank" class="weblink">http://www.wrensoft.com/zoom/</a> for more examples of search pages in the “Example sites” section.</span></p>
+<p class="p_Heading2"><span class="f_Heading2">Advanced template options</span></p>
+<p>For more advanced users, who may wish to modify the layout of search results and/or the search form outside of what is possible with CSS, they should refer to the "<a href="advanced_template_options.htm">Advanced template options</a>" section.</p>
+<p class="p_Heading2"><span class="f_Heading2">See also:</span></p>
+<p><a href="customizing_the_search_form.htm">Customizing the search form</a><br>
+<a href="customizing_the_search_results.htm">Customizing the search results</a><br>
+<a href="css_class_listing.htm">CSS class listing</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>International / foreign language support</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="international foreign languages" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?international__foreign_languag.htm"; }
+  else { parent.quicksync('a7.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">International / foreign language support</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="changing_your_default_editor.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="european_languages.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Zoom supports a wide variety of languages such as French, German, Italian, Hebrew, Cyrillic (Russian), Greek, Arabic, and others. But the search page must be configured accordingly, depending on the encoding you have used on your website. </p>
+<p>The Zoom Indexer application supports Unicode, and thus, multi-byte character strings. This allows you to index and configure your search engine for many languages using the UTF-8 encoding. However, due to the nature of the scripting platform and the server restrictions of your web host, searching for some Asian languages such as Japanese, Chinese, and Korean are limited. Searches will still be functional but accuracy is hampered due to the lack of a proper language definition to identify words.</p>
+<p>For the following language settings to work, make sure your search template HTML file is specified for the correct charset. For example,</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;HTTP-EQUIV="content-type"&nbsp;CONTENT="text/html;&nbsp;charset=windows-1252"&gt;</span></p>
+<p>&nbsp;<br>
+Zoom will warn you if it finds that the search template in the output directory does not have the same character set selected for the indexing configuration (specified under “Languages” in the Configuration window).</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> By specifying the use of Unicode and UTF-8, the indexer will also store all entries in the search engine data files as UTF-8 encoded characters. This means that the translation of accented HTML entities (such as “&amp;uuml;” etc.) will be converted to UTF-8 encoded characters. When UTF-8 is not selected, the translation happens using standard ANSI instead.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">See also:</span></p>
+<p><a href="european_languages.htm">European languages (French, German, Danish, Swedish, etc.)</a><br>
+<a href="russian_cyrillic.htm">Russian (Cyrillic)</a><br>
+<a href="japanese.htm">Japanese</a></p>
+
+</td></tr></table>
+
+</body>
+</html>

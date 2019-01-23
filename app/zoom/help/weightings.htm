@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Weightings</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="word weighting,boosting words found in,boosting words found in title,boosting words found in meta description,boosting words found in meta keywords,boosting words found in headings,boosting words found in filename,ZOOMPAGEBOOST,page boosting,content density,preference to short URLs,short URLs" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?weightings.htm"; }
+  else { parent.quicksync('a2.2.12'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Weightings</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="languages.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="content_filtering.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Heading2"><span class="f_Heading2">Word weighting</span></p>
+<p>These drop-downs allow you to increase or decrease the importance of words found, depending on whether it was found within the following:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Title of the page</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Meta description of the page</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Headings of the page (ie. within &lt;H1&gt; and &lt;H2&gt; tags)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Filename</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Meta keywords or ZOOMWORDS tag of the page</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Link text and ALT text for images</td></tr></table></div><p>The boosting can be specified between 10 levels, ranging from -5 Deboost to Normal, to +5 Boost. For example, if the Title is set to have a word weighting of "+2 Boost", then each words which appear within the page title would be treated as though have appeared twice on that page.</p>
+<p>This makes it possible for you to give priority to pages (placing it higher up in the results), when the word is found in certain sections of the page.</p>
+<p class="p_Heading2"><span class="f_Heading2">Page boosting</span></p>
+<p>You can also boosts ALL words found on specific pages, by use of the ZOOMPAGEBOOST meta tag, eg. </p>
+<p><span class="f_CodeExample">&lt;meta name="ZOOMPAGEBOOST" content="5"&gt;</span></p>
+<p>Putting this on the most important page on your site would help make it appear higher up in the search results. You can probably use less than 5 to do the same thing on a small site. Similarly, a negative value would decrease the weight of words on that page. ZOOMPAGEBOOST values can also range from -5 to 5.</p>
+<p class="p_Heading2"><span class="f_Heading2">Word position</span></p>
+<p>By changing this adjustment, you are altering the preference given to the following:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Multi-word matches that are found closer together on the same page.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Pages where words are found throughout the whole page (and not limited to a section of the page).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Occurrences of words found at the top of the page.</td></tr></table></div><p class="p_Heading2"><span class="f_Heading2">Content density</span></p>
+<p>This is an automatic weighting adjustment that is made by the indexer, based on the word density of the page. With “Standard adjustment”, the weighting of words found in a large file (such as a 50+ page PDF document) will be lowered so as to prevent such files from swamping the results and always considered the most relevant. This will effectively give preference to small and medium sized documents. “Strong adjustment” provides an even greater level of scaling, and “No adjustment” would disable this feature so that all files are treated equally.</p>
+<p class="p_Heading2"><span class="f_Heading2">Give preference to short URLs</span></p>
+<p>This is an automatic adjustment made by the Indexer, based on the length of the URL of the page being indexed. With "Standard adjustment", the weighting of a page may be slightly lowered if the URL is considered lengthy. Similarly, a page with a short URL may receive an increase in weighting. This will effectively give preference to "home pages" of the site, as opposed to those which are several folders deep. "Strong adjustment" provides an even greater level of scaling, and "No adjustment" would disable this feature so that all files are treated equally regardless of their URL length.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Translating the search page</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="translating the search page,ZLANG files" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?translating_the_search_page.htm"; }
+  else { parent.quicksync('a7.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Translating the search page</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="japanese.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="importing_and_exporting.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>You can modify the text that appears on the search page by editing the Zoom Language Files (.ZLANG files) from the Configuration window (under the “Languages” tab). Here you can edit or create new ZLANG files, or select one of the default language files to use.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> Before you start editing ZLANG files, you should first create your own language file (eg. “MyFrench.zlang”). This is because the default files that come with Zoom (English.zlang, French.zlang, etc.) will be overwritten when you re-install the software, or upgrade to a new version. If you do make all your changes in the default file, and you re-installed Zoom and find that your changes have been overwritten, you can find a backup of them in the “lang-backup” folder under your Zoom program directory.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>The ZLANG file format is simply a line-by-line entry, beginning with a “STR_” key word (such as “STR_FORM_SEARCHFOR”), followed by an equals sign, and the actual text to be used. You must always leave the “STR_” part of the line intact, and only modify the text after the equals sign. The following is an example of a ZLANG file.</p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_SEARCHFOR=Search&nbsp;for:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_SUBMIT_BUTTON=Submit</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_RESULTS_PER_PAGE=Results&nbsp;per&nbsp;page:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_CATEGORY=Category:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_CATEGORY_ALL=All</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_MATCH=Match:</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_ANY_SEARCH_WORDS=any&nbsp;search&nbsp;words</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">STR_FORM_ALL_SEARCH_WORDS=all&nbsp;search&nbsp;words</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>Note that an entry can not span multiple lines (so you should disable “Word Wrap” in Notepad). Also, the STR key words are predefined and can not be modified. Below is an extract of a ZLANG file.</p>
+<p>Use the “English.zlang” default file as your reference for text which can be translated, and the overall format of the file.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> All ZLANG files must be in Unicode encoding. You can save a file in Unicode with Notepad, by clicking on the File menu, and selecting “Save As…”. Locate the ‘Encoding” dropdown menu at the bottom of the Save As file window. Select “Unicode” here, and save your file.</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

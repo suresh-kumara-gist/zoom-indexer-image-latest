@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Limits</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="limits,maximum files to scan,maximum unique words,maximum file size scanned,maximum description length,limit files per start point,limit words per file" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?limits.htm"; }
+  else { parent.quicksync('a2.2.7'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Limits</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="indexing_options.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="authentication.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>These are the defined limits of the indexer, setting the maximum number of files to scan, maximum number of unique words to index, maximum file size scanned, and the number of characters used for the description of each file. </p>
+<p>In the free edition of Zoom, these limits are restricted to a typical size of a free, personal website (50 pages, 15,000 unique words, 100,000 bytes, and 150 characters respectively). </p>
+<p>For larger websites, or commercial projects, we recommend the <span style="font-weight: bold;">Standard Edition</span> license which is capable of indexing larger website (up to 100 pages) &nbsp;and provide plugin support for PDF, DOC, and other file types.</p>
+<p>For commercial developers, or owners of larger sites, we recommend the <span style="font-weight: bold;">Professional Edition</span> license which allows you to change these limits manually, up to a maximum of 200,000 pages and half a million (500,000) unique words.</p>
+<p>For extremely large sites (of over a million pages) or a cross-site search engine spanning many different websites, we would recommend the <span style="font-weight: bold;">Enterprise Edition</span> which has no limit on the number of pages or unique words you can attempt to index (only limited by the amount of memory in your indexing computer).</p>
+<p>For more information on the differences between these editions, please visit our webpage at:<br>
+<a href="http://www.wrensoft.com/zoom/editions.html" target="_blank" class="weblink">http://www.wrensoft.com/zoom/editions.html</a></p>
+<p class="p_Heading2"><span class="f_Heading2">Max files to scan</span></p>
+<p>This specifies the number of web pages or files that can be scanned and included in the index.</p>
+<p class="p_Heading2"><span class="f_Heading2">Max unique words</span></p>
+<p>This specifies the number of unique words (NOT total words) that can be indexed. Note that the English dictionary generally has around 50,000 unique words but this does not include people's names, brand names, conversational slang, etc. Note also that unique words only count the "base word", so when stemming is enabled, "learned", "learning" and "learnt" would only be counted as 1 unique word ("learn"). </p>
+<p class="p_Heading2"><span class="f_Heading2">Max. file size scanned</span></p>
+<p>This is the maximum size in KB (kilobytes) of a file that can be scanned. This is not the total size of all files indexed, just the size of the largest file to index. Also note that it is specified in KB, which means 1024 KB = 1 MB. </p>
+<p>The notice message that appears when you specify over 10 MB is only there to warn users who accidentally over-specify this amount, due to confusing KB with bytes.</p>
+<p class="p_Heading2"><span class="f_Heading2">Max Description length</span></p>
+<p>This is the number of characters used for the static description of each file (either the Meta description or an extracted portion of the content) in the search results listing. By increasing this amount, you can include a larger portion of text as the page description in your search results.</p>
+<p class="p_Heading2"><span class="f_Heading2">Truncate titles longer than x</span></p>
+<p>When this option is enabled, Zoom will truncate long page titles before indexing them. This prevents pages with very long titles from stretching out the layout of the search results unnecessarily.</p>
+<p class="p_Heading2"><span class="f_Heading2">Limit files per start point</span></p>
+<p>This allows you to specify a limit for each start point of the indexer, before it stops, and moves on to the next start point. It can not be greater than the maximum pages to scan limit specified earlier. You can also specify a different limit for each individual start point from the "<a href="start_spider_url.htm">Advanced spider URL options</a>" window. Note that when both the global and individual limit is set, both settings will apply, so which ever limit is first reached (ie: the lower limit of the two), will cause the indexer to stop indexing the current start point.</p>
+<p class="p_Heading2"><span class="f_Heading2">Limit words per file</span></p>
+<p>This allows you to specify the maximum number of words to index from each file. Once this limit is reached, the indexer will move on to indexing the next file. This can be useful if you are indexing a very large archive of content, and only consider the first 100 words on a page to be useful. Another example is when you are indexing PDF documents, which may contain many pages. Using this feature you can limit the indexing to the words on the first page (with an approximation of 600 words per page for example).</p>
+<p class="p_Heading2"><span class="f_Heading2">Optimization</span></p>
+<p>This slider bar allows you to control the behaviour of the search script or CGI when searching large sites. It allows you to give preference to either faster searches - at the cost of accuracy and potentially omitting some search results, or more accurate search results - at the expense of slower searching. This is particularly influential on exact phrase matching, and searches which may return a huge number of results (eg. over 1000).</p>
+<p>For the PHP and ASP versions, this control currently only reduces the accuracy of exact phrase searches (which means that it may miss some phrases) and only gains some speed when performing a phrase search.</p>
+<p>For the CGI version, it controls the maximum number of matches for a search term that is considered before asking the user to specify a more specific or less common search query. Since the CGI version is already very fast and efficient, it is really only worth changing if you are searching 100,000+ pages or more. With the default settings, we have tested Zoom to search over a million pages in less than a second (this can vary depending on the content indexed).</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>ZIP file support</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ZIP files,compressed files,unzip,extract and index all files inside ZIP archive,index filename only of ZIP archive" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?zip_file_support.htm"; }
+  else { parent.quicksync('a2.17.8'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">ZIP file support</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="using_desc_files.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="server_side_search_engine.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>ZIP file support is built into the Indexer. This means that it is different to the other file extensions listed on the "<a href="file_formats_supported.htm">File formats supported</a>" page, as it does not require a plugin to be installed. However, like the plugin support, it is not available in the Free Edition and you will need a registered edition of Zoom to index ZIP files.</p>
+<p>There are two available methods of indexing ZIP files. You can configure between them by double-clicking on the ".zip" file extension on the "Scan Options" tab of the Configuration panel.</p>
+<p class="p_Heading2"><span class="f_Heading2">Extract and index all files inside ZIP archive</span></p>
+<p>When this method is selected, ZIP files will be uncompressed and each file stored within the ZIP archive will be individually indexed. This means that if you have one ZIP file containing 20 HTML files, Zoom will index 20 files, with each of the HTML pages indexed as separate pages.</p>
+<p>Note that while search results will treat each of these files separately, there is no universally acceptable way to directly link to a file within a ZIP. So what you will see in your search results is a list of various pages (with their matching page titles, etc.) but they may all in fact link to the same ZIP file if these pages were all extracted from one ZIP file.</p>
+<p><span style="font-style: italic;">Note that ZIP files found within a ZIP archive will not be indexed.</span></p>
+<p>Below is an example of a ZIP file search result with the "extract and index all files inside ZIP archive" option enabled. In this example, all 3 files returned are in fact from one single ZIP file and they all link to the same result with "#&lt;filename&gt;" at the end of the URL.</p>
+<p style="text-align: center;"><img src="zipfile.gif" width="510" height="326" border="0" alt="zipfile" style="margin:0 auto;margin:0px;"></p>
+<p class="p_Heading2"><span class="f_Heading2">Only index filename of ZIP archive</span></p>
+<p>By selecting this indexing method, your ZIP files will not be uncompressed, and their contents will be ignored. Only the filename will be indexed, and any meta data provided via a .desc file will be used (if the "Use description (.desc) files" option is selected).</p>
+
+</td></tr></table>
+
+</body>
+</html>

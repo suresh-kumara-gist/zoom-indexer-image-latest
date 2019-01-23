@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Base URL</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="base URL,multiple base URLs,UNC addresses" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?base_url.htm"; }
+  else { parent.quicksync('a2.1.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Base URL</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="start_directory.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="output_directory.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>This is the URL where your website will be published and uploaded to. For example, if your website will be published at http://www.myisp.com/~me/index.html, then http://www.myisp.com/~me will be the base URL of your website. This is used to determine the base location of each file on your website, so do not specify the filename of the main page (i.e. index.html, home.htm, etc.).</p>
+<p style="margin: 0px 0px 10px 24px;">In <span style="font-weight: bold;">spider mode</span>, this is automatically determined for you based on the URL of the start page specified, but you can override it if necessary (click on the “More” button and select “Edit”). When specifying your own base URL in spider mode, you can also list more than one base URL by separating each with a semicolon (‘;’). For example, to allow a spider to follow links from the start point “http://www.mysite.com/index.html”, to pages hosted under the “pages.mysite.com” domain, you would have to specify a base URL of “http://www.mysite.com/;http://pages.mysite.com/”.</p>
+<p class="p_Heading2"><span class="f_Heading2">For CD-ROM/DVD distribution</span></p>
+<p>For offline/local distribution, the base URL should be the relative path from where the search script will be. It does not have to be a HTTP address. For example, if the files you have indexed will be placed in the same directory as the search.html page on the CD, use “./” (which refers to the current directory) as your base URL. This is generally recommended over the use of absolute paths such as “/” or “C:\myfiles\”, which will raise compatibility issues between different operating systems (such as Macs). See <a href="base_url_for_cd_rom.htm">Appendix B</a> if you are unfamiliar with relative paths for more information.</p>
+<p class="p_Heading2"><span class="f_Heading2">For offline or Intranet use</span></p>
+<p>Note that the base URL can not be a file path (such as “C:\Myfiles\”) or UNC address (eg. “\\MyServer\Files\”). Instead, you should use a valid file URL in the form of “<a href="file://MyServer/Files/%94." target="_blank" class="weblink">file://MyServer/Files/”.</a></p>
+<p>You could also consider using relative paths for your base URL, especially if you need to be able to move the search files and host them on different servers. See <a href="base_url_for_cd_rom.htm">Appendix B</a> if you are unfamiliar with relative paths for more information.</p>
+
+</td></tr></table>
+
+</body>
+</html>

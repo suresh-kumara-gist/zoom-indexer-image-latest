@@ -1,0 +1,67 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Base URL for CD-ROM distribution (absolute and relative paths)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?base_url_for_cd_rom.htm"; }
+  else { parent.quicksync('a9.2'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Base URL for CD-ROM distribution (absolute and relative paths)</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="what_is_javascript.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="where_is_the_program_data_dire.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Understanding absolute and relative paths are important to determine the most consistent and effective way of linking to files, and it is useful knowledge to all web developers. </p>
+<p>The following is a brief explanation for those who are not yet familiar with these forms of file paths, which are especially necessary for defining the base URL for CD-ROM and offline distribution.</p>
+<p class="p_Heading2"><span class="f_Heading2">Absolute paths</span></p>
+<p>Absolute paths refer to specific locations, independent of the current location of the file. These usually begin with a “/” or even the domain of the site (eg. “http://mysite.com/”). When a path begins with a “/”, this is a reference to the root directory. </p>
+<p>For instance, if you have the following files:</p>
+<p><img src="absolute_path_ex1.gif" width="147" height="139" border="0" alt="absolute_path_ex1"></p>
+<p>Now assuming you have your search files in the <span style="font-style: italic;">search</span> folder, and you need to link to a file in the <span style="font-style: italic;">articles</span> folder. An absolute link would be “/MyCD/articles/page1.html”. Note that this link refers to the location of the file from the root directory, and thus it will refer to the same file regardless of where you place this link.</p>
+<p>However, when you copy the contents of the “MyCD” folder to your CD-ROM, it may now look something like this:</p>
+<p><img src="absolute_path_ex2.gif" width="147" height="90" border="0" alt="absolute_path_ex2"></p>
+<p>As you can see, a reference to “/MyCD/articles/page1.html” would no longer be valid. The link would now have to be “/articles/page1.html”.</p>
+<p>Because of this issue, we generally recommend against using absolute paths if you intend to publish your files on a CD-ROM. It also causes similar issues to those described above on different Operating Systems, such as the Mac, which refers to the CD drive as a part of the path (eg: the path would be “/cdrom/articles/page1.html”).</p>
+<p class="p_Heading2"><span class="f_Heading2">Relative paths</span></p>
+<p>Relative paths refer to file locations based on the current directory. That is, they often refer to locations in the form of “up one directory level” and often begin with one or two dots (“.”). An example would be “../index.html” which would refer to the file “index.html” one directory level up.</p>
+<p>A key to relative paths:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>A single dot (“.”) refers to the current directory, eg. “./test.html” would refer to the file “test.html” in the current directory.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Double dots (“..”) refer to the previous directory, eg. “../test.html” would refer to the file “test.html” in the previous directory.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>To refer to a location which is more than one directory level up, use a combination of double dots, eg. “../../test.html” would refer to a file two directory levels up.</td></tr></table></div><p>In the case of the illustrated example above (for absolute paths), you would link to the same file with a relative path of “../articles/page1.html”. This would then still be correct when your files are moved off to a CD-ROM, because the articles folder &nbsp;is always one level up from the search folder. </p>
+<p class="p_Heading2"><span class="f_Heading2">What should I use as the base URL for a CD or DVD?</span></p>
+<p>If you need your search files to run on a CD-ROM (this also assumes you are using the Javascript version), in most cases, a base URL of “./” would work. This assumes that your search files will be located in the root directory of your CD. </p>
+<p>If however, you host your search files on a subdirectory, eg. a “search” folder off the root directory of the CD, then you would need a base URL of “../” to refer to the linked files. Refer to the above section on relative paths for more information on determining the correct relative path.</p>
+
+</td></tr></table>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Associating an image with a particular page</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ZOOMIMAGE,icons and thumbnails,icons and thumbnails associating an image with a particular page" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?zoomimage.htm"; }
+  else { parent.quicksync('a2.8.1'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Associating an image with a particular page</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="icons_and_thumbnails.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="icons.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>If you wish to associate a single image with a particular page, you can use the ZOOMIMAGE meta tag to tell Zoom the filename and location of the image file to be displayed for this page. You can do this by inserting a meta tag like the following on your web page:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="ZOOMIMAGE"&nbsp;content="images/redshoes.jpg"&gt;</span><br>
+<span class="f_CodeExample">&nbsp;</span><br>
+This&nbsp;will&nbsp;associate&nbsp;the&nbsp;image&nbsp;"redshoes.jpg"&nbsp;in&nbsp;the&nbsp;images&nbsp;folder&nbsp;with&nbsp;the&nbsp;page&nbsp;that&nbsp;this&nbsp;tag&nbsp;is&nbsp;inserted&nbsp;in.&nbsp;</p>
+<p><span class="f_Tip">This option would be particularly useful for websites where you may have an individual page per product, and you would like a picture of the product to appear along their corresponding pages (or any other website where you may want a single image representing a page).</span></p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> The path to the image files can be relative or absolute (ie. full http:// URLs). If you are using a relative path, note that the path would be relative to the page that the meta tag was found on. Zoom will automatically resolve this relative path and determine the full absolute path for your image.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>If you wish to specify a ZOOMIMAGE meta tag for PDF or other plugin supported file formats, you can do so by creating .DESC files. For more information, see "<a href="using_desc_files.htm">Using custom description (.desc) files</a>".</p>
+<p>Note that the ZOOMIMAGE meta tag has the highest priority over the different image association methods, which means that you can use it to override your thumbnail or icon settings. For example, if you have all PDF files associated with a PDF icon (as described in the next section, "<a href="icons.htm">Associating icon image with a file type</a>"), you can still specify a different image for one particular PDF file, by way of a ZOOMIMAGE tag and a .DESC file as described above.</p>
+
+</td></tr></table>
+
+</body>
+</html>

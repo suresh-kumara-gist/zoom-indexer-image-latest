@@ -1,0 +1,189 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Indexing options</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="ampersand,apostrophes,change base URLs,colon,comma,development server,dollar sign,dots,hash sign,hyphens,indexing options,rewrite links,rewrite URLs,search and replace URLs,test server,underscores,URL rewrite,word join characters,word rules" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?indexing_options.htm"; }
+  else { parent.quicksync('a2.2.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Indexing options</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="results_layout.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="limits.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Heading2"><span class="f_Heading2">What to index </span></p>
+<p>You can specify the parts of a page that should be included or excluded from indexing here. This includes the page title, content, and filename. Meta information can also be indexed such as meta descriptions, keywords, and author information. By excluding certain sections of pages, you can make index data files smaller and the indexing procedure faster, and less memory intensive. It may also help make your searches more accurate by including or excluding only the relevant sections of a page.</p>
+<p><span style="font-style: italic;">URL domain </span>will index the domain name, such that when indexing the page "http://www.mysite.com/section1/index.html", we will index the words "www mysite com" (if dots are not enabled for word rules). The full domain "www.mysite.com" would be indexed as one word if dots are enabled for joining words.</p>
+<p><span style="font-style: italic;">URL path</span> will index the path name as well such that when indexing the page "http://www.mysite.com/section1/index.html", we will index "section1".</p>
+<p>Dublin Core meta data can also be indexed. By enabling this option, Zoom will index <span style="font-style: italic;">DC.Title</span>, <span style="font-style: italic;">DC.Subject</span>, and <span style="font-style: italic;">DC.Identifier</span> meta tags as described by the <span style="font-style: italic;">Dublin Core Metadata Initiative</span> (DCMI).</p>
+<p>Note that "<span style="font-style: italic;">Link text</span>" and "<span style="font-style: italic;">ALT text for images</span>" only affect the indexing of these elements for the <span style="font-style: italic;">target or destination file</span>. That is, if a text link appears on "pageA.html" to "imageB.jpg", with the link text (or ALT text) "picture of my pets", then these words will be indexed for the file "imageB.jpg", and NOT for "pageA.html".</p>
+<p class="p_Heading2"><span class="f_Heading2">Indexing word rules</span></p>
+<p>This allows you to specify which characters should be allowed to act as a join character between two words. Otherwise, these characters will act as separators of words (for example, if the ‘dash/hyphen’ character is a join character, words such as “web-based” will be indexed as one word. Otherwise, it would be split into two words, “web” and “based”). Note that the character must be immediately preceded and followed by another valid character to be indexed.</p>
+<p>A list of the characters available for this option:</p>
+<div style="text-align: center; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table align="center" cellspacing="0" cellpadding="4" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana'; font-weight: bold;">Name</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana'; font-weight: bold;">Character</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana'; font-weight: bold;">Example words indexed</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Dots</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">.</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">F.B.I.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">.NET</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';"><a href="http://www.mysite.com" target="_blank" class="weblink">www.mysite.com</a></span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">32.10</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Hyphens</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">-</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">web-site</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Underscores</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">_</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">temporary_name</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Apostrophes</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">'</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">John's</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Hash sign</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">#</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">#3218B</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Serial#</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">ID#</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Dollar sign</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">$</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">$50</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Comma</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">,</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">60,000</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Colon</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">:</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Ref:A</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Exhibit:A</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Ampersand</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">&amp;</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">A&amp;B</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">&amp;var</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Slashes</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">/</span></p>
+<p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">\</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">either/or</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">12/5/2007</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">\myfiles\pages.txt</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="96" style="width:96px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">@ sign</span></p>
+</td>
+<td valign="top" width="86" style="width:86px; border: solid 1px #000000;"><p style="text-align: center; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">@</span></p>
+</td>
+<td valign="top" width="266" style="width:266px; border: solid 1px #000000;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">bob@mycompany</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">bob@mycompany.com (with Dots enabled) </span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Rewrite links</span></p>
+<p>This option allows you to rewrite the indexed URLs of the pages indexed. This can be useful if you are spidering a development version of your site on a test server (eg. http://test.mycompany.com/) and creating index files to go on the live server (eg. http://www.mycompany.com/). You would do this by specifying rewrite options to replace all instances of "http://test.mycompany.com/" in the indexed URLs with "http://www.mycompany.com/".</p>
+<p>You could also use this option to change all the search result links to be relative rather than absolute by replacing the domain (eg. "http://www.mysite.com/") with a relative path (eg. "./" or "../"). We only recommend this for users who are very familiar with relative linking and understand that the linking would only work if the generated search files are placed in an appropriate folder on the server.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p><span style="font-weight: bold;">Note: </span>Using the Rewrite Links option disables the ability to use incremental indexing on the produced set of index files. This means you will not be able to perform an incremental update, or add/remove pages from the index without re-indexing your site entirely. For more information on these features, see "<a href="incremental_indexing.htm">Incremental indexing</a>".</p>
+</td>
+</tr>
+</table>
+</div>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p><span style="font-weight: bold;">Note: </span>Sitemaps are also affected by the Rewrite Links option. This means that your text and XML sitemaps will contain the URL as they would be after applying the rewrite link rules, and not the URLs as indexed. Be careful with XML sitemaps, since you need to specify a Sitemap Base URL for which the pages must fall within, or otherwise it will be filtered out. You will need to make sure that the Rewrite Link settings do not change the URL such that it does not satisfy the Sitemap Base URL any more. For more information, please see "<a href="sitemaps.htm">Sitemaps</a>".</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

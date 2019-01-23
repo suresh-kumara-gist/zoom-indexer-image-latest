@@ -1,0 +1,62 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Additional notes for uploading CGI</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?uploading_cgi.htm"; }
+  else { parent.quicksync('a5.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Additional notes for uploading CGI</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="cd_rom_distribution.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="where_is_my_search_page.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>If you are using the CGI version, note that many web servers are set up to only execute CGI from a certain directory in your web account. </p>
+<p>For Apache servers, this would usually be a directory named “cgi-bin”. Check with your web host for more details, and upload your files to the appropriate directory. </p>
+<p>For IIS servers, you may need to enable “Execute permissions” for “Scripts and Executables” on your selected hosting folder. You can do this from the IIS Control Panel, right clicking on the folder, and selecting “Properties”. </p>
+<p>Once your files are uploaded to the web server, you must also set execute permissions on the file “search.cgi”, and public read permissions on the other files (all the .zdat files and the search template HTML file). This can be done via your FTP client or through a Unix shell account by using the “chmod 755 &lt;filename&gt;” command.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Tip:</span><span class="f_Tip"> Zoom can be configured to &nbsp;set execute permissions for the "search.cgi" file automatically via FTP, immediately after uploading the files. This option can be found on the FTP tab of the Configuration window. See "<a href="ftp.htm">Set execute file permission after uploading</a>" for more information. Note that this option may not work on some servers where remote file permission changes are not allowed.</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

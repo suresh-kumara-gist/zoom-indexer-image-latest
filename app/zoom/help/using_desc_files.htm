@@ -1,0 +1,56 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Using custom description (.desc) files</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="plugins,plugins using custom description .DESC files" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?using_desc_files.htm"; }
+  else { parent.quicksync('a2.17.7'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Using custom description (.desc) files</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="upgrading_a_plugin.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="zip_file_support.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>As many external binary documents do not contain useful title and description information, Zoom allows you to specify custom Meta information for any plugin supported files. The option can be enabled in the indexer configuration dialog and must be enabled for each plugin (see "<a href="configuring_a_plugin.htm">Configuring a plugin</a>"). Once it is enabled, the indexer will look for .desc files for this plugin supported file extension.</p>
+<p>For example, if you have a file called “mydocument.doc”, you can create a text file called “mydocument.doc.desc” in the same directory with the following contents:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;title&gt;This&nbsp;is&nbsp;my&nbsp;document&nbsp;custom&nbsp;title&lt;/title&gt;</span><br>
+<span class="f_CodeExample">&lt;meta&nbsp;name="description"&nbsp;content="This&nbsp;is&nbsp;my&nbsp;document's&nbsp;custom&nbsp;description"&gt;</span></p>
+<p>&nbsp;<br>
+Zoom will then index the words found within “mydocument.doc”, but use the title and description information found in “mydocument.doc.desc” – so that you will see your custom title and description in your search results. </p>
+<p>You can also specify other meta information in .desc files, including extra keywords with the ZOOMWORDS or KEYWORDS fields (see "<a href="zoomwords.htm">Manually add words to the index</a>"); ZOOMPAGEBOOST options (see "<a href="weightings.htm">Weightings</a>"), as well as Last-Modified date information (see "<a href="lastmodifieddate.htm">Specifying a last-modified date for your web pages</a>").</p>
+
+</td></tr></table>
+
+</body>
+</html>

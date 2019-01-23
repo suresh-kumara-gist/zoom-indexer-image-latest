@@ -1,0 +1,55 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Autocomplete</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?autocomplete.htm"; }
+  else { parent.quicksync('a2.2.10'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Autocomplete</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="config_ftp.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="languages.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>When this feature is enabled, as users type in the search box, a list of suggestions will appear immediately to complete their search query based on your list of words, or popular searches determined from your <a href="advanced.htm">Search Statistics Log</a>. This feature is also known as "auto-suggest".</p>
+<p><img src="autocomplete.gif" width="551" height="347" border="0" alt="autocomplete"></p>
+<p>It is most effective if you check the option to "<span style="font-weight: bold;">Include top x most popular search terms from Statistics log file</span>" and provide it with a file path or URL to the statistics log file (created in "Configure"-&gt;"Advanced"). This will then automatically update (on each indexing) with popular search terms (which yield results) submitted by the visitors on your website.</p>
+<p>Once this is enabled, the next indexing run will create an additional .zdat file ("zoom_autocomplete.zdat") and include a "zoom_autocomplete.js" file and "zoom_autocomplete.css" file. The latter two files can also be retrieved from the "Extras" folder manually (via "Tools" menu -&gt; "Open extras folder").</p>
+<p>These files must all be uploaded to your server along with your other index files (Zoom will do this automatically if you use the built-in FTP feature).</p>
+<p>The feature will work best if A) you have a server that is fairly fast and B) there is reasonable low latency between the client and the server. If you have a slow machine with high latency means that auto-complete might not keep up with the user's typing speed.</p>
+
+</td></tr></table>
+
+</body>
+</html>

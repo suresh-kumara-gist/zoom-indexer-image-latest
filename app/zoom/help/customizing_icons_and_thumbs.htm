@@ -1,0 +1,74 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Customizing the appearance of your icons or thumbnails</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="icons and thumbnails,icons and thumbnails customizing the appearance of icons or thumbnails,.result_image" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?customizing_icons_and_thumbs.htm"; }
+  else { parent.quicksync('a2.8.4'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Customizing the appearance of your icons or thumbnails</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="thumbnails.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="image_indexing.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The size and appearance of your icon or thumbnail images are defined by CSS just as the rest of your search results page appearance. </p>
+<p>See "<a href="how_do_i_customize_the_look.htm">How do I customize the look of my search page?</a>" for more information on how to apply CSS changes.</p>
+<p>The CSS classes that largely control the appearance of your images is the "result_image" class.</p>
+<p>The following are some examples of common changes that you may want to apply.</p>
+<p class="p_Heading2"><span class="f_Heading2">Changing the dimensions of your images</span></p>
+<p>You can change the width/height of your images to be displayed by changing the "img" subclass of your "result_image" CSS definition. The following example would set your image sizes to a fixed width of 100 pixels (whilst keeping the aspect ratio by letting the browser automatically determine the height):</p>
+<p class="p_CodeExample"><span class="f_CodeExample">.result_image&nbsp;img&nbsp;{&nbsp;margin:&nbsp;10px;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">width:&nbsp;100px;</span><span class="f_CodeExample">&nbsp;border:&nbsp;0px;&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>The following would set your images to a fixed size of 100x100 pixels (which may affect aspect ratio):</p>
+<p class="p_CodeExample"><span class="f_CodeExample">.result_image&nbsp;img&nbsp;{&nbsp;margin:&nbsp;10px;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">width:&nbsp;100px;&nbsp;height:&nbsp;100px;</span><span class="f_CodeExample">&nbsp;border:&nbsp;0px;&nbsp;}</span></p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Tip:</span><span class="f_Tip"> If you wish to use the original dimensions of your images or thumbnails, you can simply omit the width and height attributes in the above CSS classes.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Changing the position of your images</span></p>
+<p>You can change the position or location of your images relative to your search results. By default, they are positioned to the left of your links, but you could just as easily switch them over to the right.</p>
+<p class="p_CodeExample"><span class="f_CodeExample">.result_image&nbsp;{&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">align:&nbsp;right;</span><span class="f_CodeExample">&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">.result_image&nbsp;img&nbsp;{&nbsp;margin:&nbsp;10px;&nbsp;width:&nbsp;100px;&nbsp;border:&nbsp;0px;&nbsp;</span><span class="f_CodeExample" style="font-weight: bold;">float:&nbsp;right;</span><span class="f_CodeExample">&nbsp;}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>There are many other possibilities with some clever CSS changes, so be sure to experiment!</p>
+
+</td></tr></table>
+
+</body>
+</html>

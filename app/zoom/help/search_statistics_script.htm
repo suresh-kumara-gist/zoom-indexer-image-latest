@@ -1,0 +1,104 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Search Statistics PHP Script</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?search_statistics_script.htm"; }
+  else { parent.quicksync('a7.10'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Search Statistics PHP Script</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="jump_to_match_and_highlight.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="integrating_zoom.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>If you have PHP support on your web server, you can use a provided script ("report.php") to provide online reporting for your search log. This allows you to provide live, up-to-date statistics on your website without needing to download the log file manually and generate/upload your report.</p>
+<p>You can find this script in the "extras" folder. From the Zoom Indexer, click on the "Tools" menu and select "Open 'Extras' folder" to locate this file (also see "<a href="where_is_the_program_data_dire.htm">Where is the Program Data directory?</a>"). </p>
+<p style="text-align: center;"><img src="screenshot_tools_extras.gif" width="351" height="133" border="0" alt="screenshot_tools_extras" style="margin:0 auto;margin:0px;"></p>
+<p class="p_Heading2"><span class="f_Heading2">Installation</span></p>
+<p>Copy or upload this script to the same folder as the log file on the server.</p>
+<p>If your logfile does not have the default name of “searchwords.log” open the php script in a text editor and change this line:</p>
+<p><span class="f_CourierFixed">$LOGFILENAME &nbsp; &nbsp; &nbsp; &nbsp;= "searchwords.log";</span></p>
+<p>To correspond to the filename of your log file.</p>
+<p class="p_Heading2"><span class="f_Heading2">Customization</span></p>
+<p><span class="f_CourierFixed">PHP Variables</span></p>
+<p>Inside the php script near the top of the file are customizable options. The php script can be edited with any basic text editor. To change an option you should edit the value to the right of the equals sign. If the value is encased in quotation marks they should be left in place. Also, the semi-colon at the end of each line must remain in place as well for the script to work.</p>
+<p><span class="f_CourierFixed">$LOGFILENAME &nbsp; &nbsp; &nbsp; &nbsp; = "searchwords.log";</span><br>
+The name of the log file that the statistics will be generated from.</p>
+<p><span class="f_CourierFixed">$TEMPLOGNAME = "_tempsearchwords.log";</span><br>
+Name of temporary log file. This file will be created and written to during a trim operation. If the file already exists it will be overwritten.</p>
+<p><span class="f_CourierFixed">$BAR_LENGTH = 300;</span><br>
+The length in pixels of the longest bar in each bar chart .</p>
+<p><span class="f_CourierFixed">//$PASSWORD_REPORT = "password";</span><br>
+This is the password required to generate a report. Note that the line begins with //, this means that the line is commented and is not active. To enable password protection for generating a report remove the // from the beginning of the line and change “password” to whatever you would like the password to be.</p>
+<p><span class="f_CourierFixed">//$PASSWORD_TRIM = "password";</span><br>
+This is the password required to trim a log file. Note that the line begins with //, this means that the line is commented and is not active. To enable password protection for trimming the log file remove the // from the beginning of the line and change “password” to whatever you would like the password to be.</p>
+<p><span class="f_CourierFixed">$ENABLE_TRIM = 1;</span><br>
+This line enables or disables the ability of the script to trim a log file. By default this is set to 1 (on). If you would like to completely disable the trim functionality from the script please set this to 0.</p>
+<p><span class="f_CourierFixed">$_DEBUG = 0;</span><br>
+Debug data on or off, you probably don't want to change this setting.</p>
+<p class="p_Heading2"><span class="f_Heading2">CSS Styles</span></p>
+<p>Near the top of the PHP script are some CSS styles that can be used to change the look of the report. Feel free to edit these however you like.</p>
+<p class="p_Heading2"><span class="f_Heading2">Report Configuration</span></p>
+<p><span style="font-style: italic;">Start Date / Finish Date</span></p>
+<p style="margin: 0px 0px 10px 24px;">The reports will be generated based on a date range specified in these fields. The date range is inclusive of the dates specified. The recommended format for entering dates is in the (year-month-day) format however the script is able to recognize many formats so you can try entering in the date however you like. The dates will be displayed in year-month-day format on the final report page so you will know if the script understood what you meant. Some example dates are:</p>
+<p style="margin: 0px 0px 10px 24px;">• &nbsp; &nbsp; &nbsp; &nbsp;“now” – Today’s date</p>
+<p style="margin: 0px 0px 10px 24px;">• &nbsp; &nbsp; &nbsp; &nbsp;“3rd March 2007”</p>
+<p style="margin: 0px 0px 10px 24px;">• &nbsp; &nbsp; &nbsp; &nbsp;“-1 Month” – Today’s date minus 1 month</p>
+<p><span style="font-style: italic;">Top 10 Search phrases</span></p>
+<p style="margin: 0px 0px 10px 24px;">This provides a bar chart of the top 10 search phrases made on your website. This gives you a good indication of what people are looking for on your website.</p>
+<p><span style="font-style: italic;">Top 10 Search Phrases that returned no matches</span></p>
+<p style="margin: 0px 0px 10px 24px;">This provides a bar chart of the top 10 search phrases on your website which found “no results”. This is useful for determining what your visitors are searching for on your website but not managing to find. You can use this information to provide content that better cater your website to your visitors (or determine what meta keywords to add to allow your users to find what they are looking for).</p>
+<p><span style="font-style: italic;">Searches per day</span></p>
+<p style="margin: 0px 0px 10px 24px;">This provides a bar chart representing the number of searches that are made on your website per day.</p>
+<p><span style="font-style: italic;">Searches per week </span></p>
+<p style="margin: 0px 0px 10px 24px;">This provides a bar chart representing the number of searches made on your website per week.</p>
+<p><span style="font-style: italic;">Searches per month</span></p>
+<p style="margin: 0px 0px 10px 24px;">This provides a bar chart representing the number of searches made on your website per month.</p>
+<p><span style="font-style: italic;">List the top x searched words (sorted by popularity)</span></p>
+<p style="margin: 0px 0px 10px 24px;">This option appends a HTML table of search words (sorted by popularity). You can specify the number of searched words you would like to list here.</p>
+<p><span style="font-style: italic;">Raw Data Output</span></p>
+<p style="margin: 0px 0px 10px 24px;">A table containing the raw data from the log file for the date range specified. Because this data can be quite large a maximum of 5000 log entries will be displayed. If you need to see more consider opening the log file directly in a text editor.</p>
+<p><span style="font-style: italic;">Password</span></p>
+<p style="margin: 0px 0px 10px 24px;">If you have enabled password protection for generating logs you will need to enter your password on the configuration page.</p>
+<p class="p_Heading2"><span class="f_Heading2">Trim Functionality</span></p>
+<p>The trim section of the configuration page allows you to delete entries out of the log file, making it smaller and faster to generate reports from. Consider using this if report generation is taking too long or timing out. Please note however that this operation cannot be undone and any deletions are permanent.</p>
+<p><span style="font-style: italic;">Password</span></p>
+<p style="margin: 0px 0px 10px 24px;">If you have enabled password protection for trimming the log file you will need to enter your password here.</p>
+<p><span style="font-style: italic;">Trim Log Entries Before</span></p>
+<p style="margin: 0px 0px 10px 24px;">Any log entries before this date will be permanently deleted. Like the start/finish dates in the report configuration this field can take a number of formats, once you click the Trim Log button you will be taken to a confirmation page that will display the entered date in year-month-day format to confirm the script understood what you meant and to make sure you really want to delete the records.</p>
+
+</td></tr></table>
+
+</body>
+</html>

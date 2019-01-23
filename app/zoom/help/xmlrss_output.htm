@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>XML/RSS output (CGI only)</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="XML/RSS output,XML/RSS output overview,XML/RSS output OpenSearch compatibility,XML/RSS output channel information,XML/RSS output OpenSearch description file,XML/RSS output Highlighting within XML results,Highlighting within XML results" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?xmlrss_output.htm"; }
+  else { parent.quicksync('a2.11'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">XML/RSS output (CGI only)</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="incremental_commandline.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="broken_link_detection.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p><span style="font-style: italic;">This option is only available for the CGI platform.</span></p>
+<p>Zoom can now return search results in an OpenSearch compatible XML/RSS format. This allows for a number of possibilities including:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>The ability for developers to post-process or reformat the search results using their own scripts or applications.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>The possibility of providing RSS feeds for end-users to monitor the results for a subject they are interested in.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>The ability to integrate your search engine with the increasing number of OpenSearch platforms and solutions out there. This includes the ability to submit your search engine to an aggregator such as a9.com, or as a search provider to IE7/Firefox browsers. See "OpenSearch compatibility".</td></tr></table></div><div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> The XML/RSS output does not contain a search form so you will need to have a search form created on another page or script which passes the query to the CGI as HTTP GET parameters. The XML output is not designed to be an end-user interface. It was designed to be made available for parsing by scripting languages, 3rd party software and aggregators.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>You can enable this as default behaviour by selecting the checkbox Use XML/RSS output on the "<a href="advanced.htm">Advanced</a>" tab of the Configuration window. </p>
+<p>Alternatively, you can switch between HTML and XML/RSS output via a URL parameter of "zoom_xml".</p>
+<p>So the following URL would display search results for "dog" in HTML:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">search.cgi?zoom_query=dog&amp;zoom_xml=0</span></p>
+<p>&nbsp;<br>
+And the following URL would display search results for "dog" in XML/RSS:</p>
+<p><span class="f_CodeExample">search.cgi?zoom_query=dog&amp;zoom_xml=1</span></p>
+<p class="p_Heading2"><a name="opensearch"></a><span class="f_Heading2">OpenSearch compatibility</span></p>
+<p>With Zoom's XML/RSS output format being compatible with OpenSearch, you will be able to integrate your search engine with a number of OpenSearch platforms. This includes the ability to submit your search engine to an aggregator such as a9.com, or as a search provider to IE7/Firefox browsers. For more information on OpenSearch, please visit the websites: <a href="http://opensearch.a9.com/" target="_blank" class="weblink">http://opensearch.a9.com/</a> and <a href="http://www.opensearch.org/" target="_blank" class="weblink">http://www.opensearch.org/</a></p>
+<p>To configure your XML output for use with OpenSearch aggregators, you should specify channel information and an OpenSearch description file. To do this, click on the "<a href="advanced.htm">Advanced</a>" tab of the Configuration window, and click on the "Configure" button under the "XML/RSS output" section. This will bring up the XML/RSS output options.</p>
+<p><img src="screenshot_config_xml.gif" width="250" height="302" border="0" alt="screenshot_config_xml"></p>
+<p>Here you can specify the <span style="font-weight: bold;">Title</span>, <span style="font-weight: bold;">Description</span>, and <span style="font-weight: bold;">URL</span> of your search engine. This is what the OpenSearch aggregator will use to identify your search engine.</p>
+<p>You can also specify the URL to your <span style="font-weight: bold;">OpenSearch description file</span> here. This is a XML file which you host on your website, containing information on how the aggregator can send queries to your search engine. </p>
+<p>The <span style="font-weight: bold;">XSLT URL</span> allows you to specify a XSL (Extensible Stylesheet Language) Transformation file to transform the XML output to another required XML format or document. You can find out more about this here:<br>
+<a href="http://www.w3.org/TR/xslt" target="_blank" class="weblink">http://www.w3.org/TR/xslt</a></p>
+<p>For more information on the official OpenSearch specifications for details on the description file and Query Syntax:<br>
+<a href="http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document" target="_blank" class="weblink">http://www.opensearch.org/Specifications/OpenSearch/1.1#OpenSearch_description_document</a></p>
+<p>The following is an example of a description file for a CGI search engine created with Zoom:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;?xml&nbsp;version="1.0"&nbsp;encoding="UTF-8"?&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;OpenSearchDescription&nbsp;xmlns="http://a9.com/-/spec/opensearch/1.1/"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;ShortName&gt;Bob's&nbsp;Search&nbsp;Engine&nbsp;for&nbsp;Cars&lt;/ShortName&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;Description&gt;Search&nbsp;engine&nbsp;for&nbsp;all&nbsp;things&nbsp;cars&nbsp;and&nbsp;automobile&lt;/Description&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;Contact&gt;bob@bobcars.com&lt;/Contact&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&lt;Url&nbsp;type="application/rss+xml"&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;template="http://www.bobcars.com/cgi-bin/search.cgi?zoom_query={searchTerms}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;amp;zoom_page={startPage?}&amp;amp;zoom_per_page={count?}&amp;amp;zoom_and={searchAll?}</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&amp;amp;zoom_cat&amp;#91;&amp;#93;={category1?}&amp;amp;zoom_cat&amp;#91;&amp;#93;={category2?}"/&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/OpenSearchDescription&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_Heading2"><span class="f_Heading2">Highlighting within XML results (context only)</span></p>
+<p>This option enables highlighting within the context description returned in the XML results. This is disabled by default to return a more natural XML response (so that &lt;zoom:context&gt; contains text rather than XML). By enabling this option, highlighting will be indicated by &lt;zoom:highlight&gt; tags within the &lt;zoom:context&gt; tag content.</p>
+
+</td></tr></table>
+
+</body>
+</html>

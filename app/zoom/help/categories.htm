@@ -1,0 +1,114 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Categories</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="categories,categories category name,categories category pattern,categories category description,categories allow searching in multiple categories,categories specifying category per file (ZOOMCATEGORY),categories importing categories,drop-down box,group files by pattern in URL or filename,catch files not belonging to a category,multiple categories,ZOOMCATEGORY" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?categories.htm"; }
+  else { parent.quicksync('a2.5'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Categories</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="ftp.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="custom_meta_search_fields.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>This allows you to specify categories in your search engine, allowing your users to select from a drop-down to restrict searches to certain sections of your site. Each search result will also be tagged to indicate the category that they belong to. Searching with the “All” category will return results belonging to any of the categories.</p>
+<p class="p_Heading1" style="text-align: center;"><img src="screenshot_cats.gif" width="374" height="217" border="0" alt="screenshot_cats" style="margin:0 auto;margin:0px;"></p>
+<p>To enable categories support, open the Configuration window and select the "Categories" tab. This will bring up the categories management list, where you can add, remove, and edit the categories.</p>
+<p style="text-align: center;"><img src="screenshot_config_cats.png" width="520" height="435" border="0" alt="screenshot_config_cats" style="margin:0 auto;margin:0px;"></p>
+<p class="p_Heading2"><a name="addcats"></a><span class="f_Heading2">Adding, editing and removing categories</span></p>
+<p>When creating or editing a category, you have the following fields to specify:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">1.</span></td><td><span style="font-weight: bold;">Category name:</span> The name of the category must be unique. These category names will be listed in the drop-down box of the search page, or as check boxes if you have "<span style="font-style: italic;">Allow searching in multiple categories</span>" selected.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">2.</span></td><td><span style="font-weight: bold;">Match pattern:</span> The pattern is used to determine what pages belong to the category. It is matched against the pages’ full path or URL. This means that should the pattern appear anywhere on a page’s URL, it will be qualified for that category. Note that this includes the base URL or domain name of each page, so that you can index multiple domains, and have each defined as a separate category. <br>
+&nbsp;<br>
+For example, a pattern of “test” will collect the following pages: <br>
+http://www.mysite.com/test.html<br>
+http://www.mysite.com/test/index.html<br>
+http://www.test.com/<br>
+… etc.<br>
+&nbsp;<br>
+<span style="font-style: italic; font-weight: bold;">Tip:</span><span style="font-style: italic;"> You can use patterns such as “.pdf” to create categories based on file extensions (eg. "PDF documents", "PowerPoint presentations", "Flash movies", etc.)</span><br>
+<span style="font-style: italic;">&nbsp;</span><br>
+Category patterns are case insensitive. You can also use wildcard characters ("*" and "?") in your pattern. This means that you can create a pattern such as "/news/updates_*.pdf" which will get all PDF files, inside the news folder, with a filename starting with "updates_".<br>
+&nbsp;<br>
+You can specify multiple patterns for each category, separated by a semi-colon character. For example, a category named “Downloads” may contain a variety of file formats with a pattern like “.pdf;.doc;.xls;.ppt;.exe” (without the quotes). Note that with multiple patterns, a file will only need to match any one of the listed patterns for it to qualify for that category.<br>
+&nbsp;<br>
+For files which you can not match by a common pattern in the filename or URL, see "<a href="categories.htm#zoomcategory">Specifying category per file</a>".</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">3.</span></td><td><span style="font-weight: bold;">Description:</span> This is a short description of the category that will only be used internally in the indexer for your own convenience in the future. It is not a required field.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="22"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">4.</span></td><td>You can toggle the option of whether files caught by this category can belong to any other category. By default, this is off, which means that a file can belong to multiple categories (so long as it matches the category patterns). When this option is enabled for a category, a file caught by this category can no longer qualify for any other category. <br>
+&nbsp;<br>
+Note that when using this option, you should be careful with the order of your categories. If your category patterns are too vague, or ordered incorrectly, you may have files grouped away in an earlier category, before it gets a chance to be matched against a later category that you intended it to fall under.</td></tr></table></div><p>You can use the up/down buttons to the right of the list to re-arrange the order of the categories. The order of the categories determines two things:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>The order of which they will appear in the drop-down list of the search page, or (if you have "<span style="font-style: italic;">Allow searching in multiple categories</span>" selected) the order of the check boxes on the search page.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>The process of selecting which category a page belongs to. This is important if you have any category using the "<span style="font-style: italic;">Files belonging to this category can not belong to any other category</span>" option. This means that if a page is deemed to qualify for an earlier category (higher up in the list), it will not qualify for any other categories below it in the list.</td></tr></table></div><div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> Remember that y</span>ou will need to re-index for your category changes to take effect.</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Catch files not belonging to a category</span></p>
+<p>This option allows you to toggle the use of a "catch-all" or "default" category, which will contain any files that did not fall in one of the specified categories in the list. You can use this to create a category for "Miscellaneous files" or "Other documents" by checking this option and specifying the category name in the text box.</p>
+<p class="p_Heading2"><span class="f_Heading2">Allow searching in multiple categories</span></p>
+<p>This option will allow your users to restrict their searches for files belonging to multiple categories. If you are allowing Zoom to generate its own search form, this will change the category drop-down box to a checkbox selection list as seen below.</p>
+<p style="text-align: center;"><img src="screenshot_multicats.gif" width="416" height="204" border="0" alt="screenshot_multicats" style="margin:0 auto;margin:0px;"></p>
+<p>As always, you can customize the appearance of this category list via CSS, making it appear vertically or in any other layout. See "<a href="how_do_i_customize_the_look.htm">How do I customize the look of my search page?</a>" and the "<a href="css_class_listing.htm">CSS class listing</a>" for <span style="font-style: italic;">zoom_categories</span> for more information.</p>
+<p class="p_Heading2"><span class="f_Heading2">Show category breakdown in search results ("Refine your search by ...")</span></p>
+<p>This enables the displaying of a summary of the categories which your search results belong to. It allows your end users to see how many results belong to each category, and provides links to further refine their search by that category.</p>
+<p style="text-align: center;"><img src="screenshot_catsummary.gif" width="401" height="126" border="0" alt="screenshot_catsummary" style="margin:0 auto;margin:0px;"></p>
+<p class="p_Heading2"><a name="zoomcategory"></a><span class="f_Heading2">Specifying category per file</span></p>
+<p>For files which have no easy way to be categorized by a pattern in the filename or URL, you can specify a category for these files on a file-by-file basis. You do this by adding a ZOOMCATEGORY meta tag within your file, like so:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="ZOOMCATEGORY"&nbsp;content="News"&gt;</span></p>
+<p>&nbsp;<br>
+Specifying the name of the category in the content part of the meta tag. This above example will categorize the file in the "News" category (overriding the URL/filename matching method).</p>
+<p>You can specify multiple ZOOMCATEGORY tags within the same file if you wish to have the page belonging to more than one category. For example:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="ZOOMCATEGORY"&nbsp;content="News"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;meta&nbsp;name="ZOOMCATEGORY"&nbsp;content="Old&nbsp;website&nbsp;archive"&gt;</span></p>
+<p class="p_Heading2"><span class="f_Heading2">Importing categories</span></p>
+<p>You can click on the "Import" button to import a list of categories from a CSV or text file. The comma separated text file should be in the following format:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;name&gt;,&lt;pattern&gt;,&lt;description&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span><br>
+Note&nbsp;that&nbsp;since&nbsp;each&nbsp;field&nbsp;is&nbsp;to&nbsp;be&nbsp;comma&nbsp;separated,&nbsp;you&nbsp;will&nbsp;need&nbsp;to&nbsp;enclose&nbsp;a&nbsp;field&nbsp;in&nbsp;quotation&nbsp;marks&nbsp;if&nbsp;you&nbsp;wish&nbsp;to&nbsp;specify&nbsp;a&nbsp;comma.&nbsp;For&nbsp;example:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">News,&nbsp;/news/,&nbsp;This&nbsp;would&nbsp;be&nbsp;the&nbsp;news&nbsp;section</span><br>
+<span class="f_CodeExample">Articles,&nbsp;/articles_,&nbsp;Article&nbsp;webpages</span><br>
+<span class="f_CodeExample">"Links,&nbsp;resources,&nbsp;and&nbsp;other&nbsp;things",&nbsp;/links/,&nbsp;links&nbsp;to&nbsp;external&nbsp;sites</span><br>
+<span class="f_CodeExample">French,&nbsp;/fr_</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span><br>
+As&nbsp;you&nbsp;can&nbsp;see&nbsp;in&nbsp;the&nbsp;above&nbsp;example,&nbsp;you&nbsp;can&nbsp;omit&nbsp;the&nbsp;description&nbsp;if&nbsp;one&nbsp;is&nbsp;not&nbsp;required.&nbsp;But&nbsp;a&nbsp;name&nbsp;and&nbsp;pattern&nbsp;is&nbsp;always&nbsp;required.</p>
+<p>You can specify a category as being mutually exclusive (so that the file belonging to the category can not belong to any other category) by adding a fourth field on the line, like so:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">Sales,&nbsp;/sales/,my&nbsp;sales&nbsp;related&nbsp;files,EXCLUSIVE</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>Note that importing categories will append to the existing list of categories already loaded. Note also that categories must have a unique name, and if a category with the same name already exists, it will be ignored on import.</p>
+
+</td></tr></table>
+
+</body>
+</html>

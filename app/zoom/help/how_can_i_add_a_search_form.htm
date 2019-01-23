@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>How can I add a search form to my menus, main page, etc.?</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="adding a search form to your website" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?how_can_i_add_a_search_form.htm"; }
+  else { parent.quicksync('a6.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">How can I add a search form to my menus, main page, etc.?</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="how_do_i_modify_search_form.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="advanced_template_options.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>If you want to add a simple search form on your website’s main page, or navigation bar, etc, you can do so by specifying the following HTML on that page. </p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;form&nbsp;method="GET"&nbsp;action="search.php"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="text"&nbsp;name="zoom_query"&nbsp;size="10"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input&nbsp;type="submit"&nbsp;value="Search"&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/form&gt;</span></p>
+<p>&nbsp;<br>
+Please change “search.php” in the above HTML to the appropriate search page: that is, “search.asp” for ASP users, &nbsp;“search.cgi” for CGI users, and “search.html” for JavaScript users. </p>
+<p>Note also, the relative location of the search script from where this HTML is placed (eg. if the form is used in a page that is one directory down from the search script, you would need to link to “../search.php”). </p>
+<p>Alternatively, you can use an absolute path to the search script (so that no matter where you place the above HTML, it will still find the file), for example: </p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;form&nbsp;method="GET"&nbsp;action="http://www.mysite.com/search.php"&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;/form&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>If you wish to include more search options (such as match any search words / all search words, etc.) refer to the example in "<a href="how_do_i_modify_search_form.htm">How do I modify the search &nbsp;form</a>".</p>
+
+</td></tr></table>
+
+</body>
+</html>

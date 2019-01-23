@@ -1,0 +1,91 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Advanced</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="advanced options,beep at the end of indexing,custom script source path,disable charset enforcing on search script,do not show wizard on startup,embedding script,header already defined,pdf plugin options,search logging,search statistics report,search statistics report logging search words,User-Agent text,XML/RSS output,XML/RSS output configuring" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?advanced.htm"; }
+  else { parent.quicksync('a2.2.19'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Advanced</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="index_log.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="config_custom_meta_search_fields.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Heading2"><span class="f_Heading2">Do not show wizard on startup</span></p>
+<p>Stop the wizard from being displayed when Zoom is started.</p>
+<p class="p_Heading2"><span class="f_Heading2">Beep at the end of indexing</span></p>
+<p>Play the system alert sound when indexing completes.</p>
+<p class="p_Heading2"><span class="f_Heading2">Search logging </span></p>
+<p><span style="font-style: italic;">This option is not available when the Javascript platform is selected. This is due to the fact that Javascript is a client-side scripting language and logging of user searches is not possible.</span></p>
+<p>This enables search word logging so that searches made on your website will be recorded into a server-side log file. Note that you will have to specify the filename and path of the location of the log file on the server-side relative to the location where you will place the search script. </p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> You will need to be able to change server-side file permissions to allow write access to the log file you specify. We recommend this option to more advanced users familiar with server side file permissions only. Note that many cheaper web-hosting services do not allow you to change your file permissions, so consult your web hosting company regarding this beforehand. This can normally be done via your FTP client or through a Unix shell account by using the "</span><span class="f_Tip">chmod"</span><span class="f_Tip"> command. For more help and information on setting up your server-side permissions for logging, please refer to our online FAQ:</span><br>
+<span class="f_Tip"><a href="http://www.wrensoft.com/zoom/support/logging.html" target="_blank" class="weblink">http://www.wrensoft.com/zoom/support/logging.html</a></span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;<br>
+Logged search results contain, the date (YYYY-MM-DD), the time, the IP address of the user, the search query, and the search options used. The following is an example of a log file record (on one line).</p>
+<p><span class="f_CodeExample">2004-03-05, 09:52:08, 127.0.0.1, "test search query", Matches = 6, OR, PerPage = 10, PageNum = 0, No cats, Time = 0.084, Rec = 0</span></p>
+<p> Since the log file is in CSV format, you could also import the file directly into Excel.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note to CGI users:</span><span class="f_Tip"> if you are hosting on an Apache server (in a “cgi-bin” directory), remember that most Apache servers do not allow text files to be accessed via HTTP from the cgi-bin directory. This means that if you store your log file in “/cgi-bin/logs/”, you will not be able to access this file via HTTP using your browser or Zoom’s Statistics Report tool – instead, you will only be able to download the file with FTP and analyse it locally. Alternatively, make sure you specify a log file path outside of the “cgi-bin” directory.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Custom script source path </span></p>
+<p>If you wish to use a copy of the search script (<span class="f_CodeExample">search.asp</span>,<span class="f_CodeExample"> search.php</span> or<span class="f_CodeExample"> search.js</span>) that is located in a different folder besides the one in the Zoom installation directory, then you can change the path here. This is only necessary if you are making modifications to the search script source code, and you wish to maintain multiple versions to be used with different sites.</p>
+<p class="p_Heading2"><span class="f_Heading2">Embedding script</span></p>
+<p>This option allows you to specify the URL used to link back to the search script. By default, it should be left blank.</p>
+<p>However, if you wish to embed the search script in your own server-side scripts (eg. you have included search.php into your own PHP file, or included the CGI within a PHP script, etc.) you can then specify the filename of your embedded script here so that it will link to the correct file.  </p>
+<p class="p_Heading2"><span class="f_Heading2">Spider User-Agent (Enterprise Edition only)</span></p>
+<p>Users of the Enterprise Edition of Zoom can modify the User-Agent text that is used to identify the spider when it crawls web servers. By default, the spider identifies itself as "ZoomSpider - wrensoft.com [ZSEBOT]". </p>
+<p>If you specify a name here, e.g. "mysearchengine.com", your spider will then identify itself as "mysearchengine.com [ZSEBOT]". This allows you to include your website name or other contact information, should you wish to allow third-party websites to identify you, or be able to contact you if required. It can also be helpful if you wish to add specialized behaviour to your website, so that, for example, you could allow your personal spider exclusive access to certain pages on your site, and prohibit access for any other user-agents.</p>
+<p class="p_Heading2"><span class="f_Heading2">Disable charset enforcing on search script</span></p>
+<p>This option disables the search script’s attempt at specifying the charset via a HTTP header. This is done to ensure that the corresponding character set used for the encoding of the index data, is also used for the search page. However, if you are an advanced user trying to embed the search script within your own scripted pages, this extra HTTP header may not be required (as you may already have HTTP output before the search script is executed). In this case, you can safely disable this feature here.</p>
+<p class="p_Heading2"><span class="f_Heading2">XML/RSS output (CGI only)</span></p>
+<p>The CGI version can now return search results in XML/RSS format. Selecting this checkbox will enable the XML output as default, and clicking "Configure" will allow you to specify some XML specific settings. See "<a href="xmlrss_output.htm">XML/RSS output</a>" for more information.</p>
+
+</td></tr></table>
+
+</body>
+</html>

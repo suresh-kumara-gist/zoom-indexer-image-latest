@@ -1,0 +1,156 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Command line parameters</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="command-line parameters,auto-run options,scheduling,scheduling command-line parameters" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?command_line_parameters.htm"; }
+  else { parent.quicksync('a2.14'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Command line parameters</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="configuration_zcfg_files.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="scheduling_and_automatic_index.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>The Zoom Indexer accepts command line parameters if you wish to use it with an automated scheduling program or just to create a convenient shortcut in Windows. The usage definition is:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">ZoomIndexer&nbsp;[auto-run&nbsp;options]&nbsp;&lt;config-file&gt;&nbsp;[incremental&nbsp;options]</span></p>
+<p>&nbsp;<br>
+<span class="f_Heading2">Auto-run options</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="5" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="56" style="width:56px;"><p style="text-align: right; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-s</span></p>
+</td>
+<td valign="top" width="389" style="width:389px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Auto-run in </span><span style="font-size: 8pt; font-family: 'Verdana'; font-style: italic;">spider mode</span><span style="font-size: 8pt; font-family: 'Verdana';">, start indexing as soon as the application loads. This option requires that a config-file be specified also.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="56" style="width:56px;"><p style="text-align: right; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-o</span></p>
+</td>
+<td valign="top" width="389" style="width:389px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Auto-run in </span><span style="font-size: 8pt; font-family: 'Verdana'; font-style: italic;">offline mode</span><span style="font-size: 8pt; font-family: 'Verdana';">, and start indexing as soon as the application loads. This option requires that a config-file be specified also.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="56" style="width:56px;"><p style="text-align: right; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-r</span></p>
+</td>
+<td valign="top" width="389" style="width:389px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Auto-run </span><span style="font-size: 8pt; font-family: 'Verdana'; font-style: italic;">Statistics Report Generator</span><span style="font-size: 8pt; font-family: 'Verdana';">. This will automatically create the search statistics page based on the report options saved in the config file specified.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="56" style="width:56px;"><p style="text-align: right; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-c</span></p>
+</td>
+<td valign="top" width="389" style="width:389px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Console mode (Enterprise Edition only). When using this mode, Zoom will run without a GUI, and output all log messages to stdout. See "<a href="integrating_zoom.htm">Integrating Zoom in your own applications</a>" for more information.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="5" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="113" style="width:113px; height:22px;"><p style="text-align: right; margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Courier New';">&lt;config-file&gt;</span></p>
+</td>
+<td valign="top" width="349" style="width:349px; height:22px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">The configuration file to load on start up</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>Auto-run options are mutually exclusive and only one can be selected at any one time. For example, the following is not valid: “ZoomIndexer –s –o zoom.zcfg”. If you need to schedule an indexing session and also generate a report, then you will have to index two separate tasks.</p>
+<p class="p_Heading2"><span class="f_Heading2">Incremental indexing options</span></p>
+<p>The following command-line options allow you to call upon the "<a href="incremental_indexing.htm">Incremental indexing</a>" features along with the auto-run options. This allows developers to call Zoom to perform these operations via external scripts or applications (eg. you could have a server-side script which calls Zoom to add a new start point to an existing index when a user submits them via a web page).</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="5" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="92" style="width:92px;"><p style="white-space: nowrap;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-update</span></p>
+</td>
+<td valign="top" width="610" style="width:610px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">This will perform an incremental update (as described above) on the specified ZCFG file. You must also specify the index mode (offline or spider) and the config file like so:</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ZoomIndexer.exe&nbsp;-s&nbsp;zoom.zcfg&nbsp;-update</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="92" style="width:92px;"><p style="white-space: nowrap;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-addpage</span></p>
+</td>
+<td valign="top" width="610" style="width:610px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">This will add a specific page to the existing index specified by the config file and index mode. eg.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">ZoomIndexer.exe -s zoom.zcfg -addpage http://www.mywebsite.com/newpage.html</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Note that if you are using offline mode, you will need to specify a base URL following the addpage URL with a semi-colon (";") character, eg.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">ZoomIndexer.exe -o zoom.zcfg -addpage C:\mywebsite\newpage.html;http://mywebsite.com/</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="92" style="width:92px;"><p style="white-space: nowrap;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-addpages</span></p>
+</td>
+<td valign="top" width="610" style="width:610px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">This is the same as -addpage but allows you to specify a text file containing a list of new pages (rather than calling it for one page only). eg.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">ZoomIndexer.exe&nbsp;-s&nbsp;zoom.zcfg&nbsp;-addpages&nbsp;newpages.txt</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Note that if you are using offline mode, you will need to specify a base URL following the filename with a semi-colon (";") character, eg.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">ZoomIndexer.exe -o zoom.zcfg -addpages newpages.txt;http://mywebsite.com/</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="92" style="width:92px;"><p style="white-space: nowrap;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-addstartpt</span></p>
+</td>
+<td valign="top" width="610" style="width:610px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">This option will perform an incremental add start point operation on the specified config file and index mode. eg.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">ZoomIndexer.exe -s zoom.zcfg -addstartpt http://www.mynewsite.com/</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">Offline mode will expect a base URL following the start directory, separated by a semi-colon (";") character, eg.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p class="p_CodeExample" style="white-space: normal;"><span class="f_CodeExample">ZoomIndexer.exe -o zoom.zcfg -addstartpt C:\mynewwebsite\;http://www.mynewwebsite.com/</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="92" style="width:92px;"><p style="white-space: nowrap;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-addstartpts</span></p>
+</td>
+<td valign="top" width="610" style="width:610px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">This is the same as -addstartpt but allows you to specify a text file containing a list of start points.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">In spider mode, the format of this text file is the same as the "Import start points" feature, which allows you to specify spidering options such as "index and follow" or "index only", etc. As well as allowing you to specify a Limit of the number of pages to index for each start point. See the chapter on "<a href="importing_and_exporting.htm">Importing and exporting additional URLs</a>" in the Users Guide for more information.</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="92" style="width:92px;"><p style="white-space: nowrap;"><span style="font-size: 8pt; font-family: 'Courier New'; font-weight: bold;">-deletepage</span></p>
+</td>
+<td valign="top" width="610" style="width:610px;"><p style="margin: 0px 0px 0px 0px;"><span style="font-size: 8pt; font-family: 'Verdana';">This parameter will delete the specified page from the index as configured by the ZCFG file given and the index mode specified. eg.</span></p>
+<p style="margin: 0px 0px 0px 0px;"><span style="font-family: 'Arial'; color: #000000;">&nbsp;</span><br>
+<span class="f_CodeExample">ZoomIndexer.exe -s zoom.zcfg -deletepage http://www.mywebsite.com/oldnews.html</span></p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

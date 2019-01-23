@@ -1,0 +1,135 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Integrating Zoom in your own applications</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="console mode,stdout,distribution license,exit codes" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?integrating_zoom.htm"; }
+  else { parent.quicksync('a7.11'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Integrating Zoom in your own applications</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="search_statistics_script.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="the_indexing_process.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Software developers looking to include a search engine feature as part of their own applications can integrate Zoom Indexer into their software and provide dynamic indexing and searching on demand.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> A single license of Zoom is required for each copy of the Zoom Indexer application installed on a computer. This does not permit you to distribute the registered version of the Zoom Indexer software. A special distribution license (and a custom built version of Zoom) must be purchased separately if you wish to distribute Zoom Indexer with your software. Please <a href="contacting_us.htm">contact us</a> for more details.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Console mode (Enterprise Edition only)</span></p>
+<p>The Enterprise Edition of Zoom allows the Indexer to run in "console mode". When Zoom is running in this mode, it will not display a GUI nor require any user interaction. With the use of pre-configured .ZCFG files, the Zoom Indexer can then be spawned as a process to index files as needed. </p>
+<p>All indexing progress, and error messages will be written to “stdout” and you can capture the output for internal analysis, or display to the user as you wish. The Indexer will also return an exit code indicating the outcome of the indexing.</p>
+<p>Console mode must be specified alongside an AutoRun option, and a configuration filename. The following example will run the Indexer in console mode, indexing offline, using the configuration settings defined in "zoom.zcfg":</p>
+<p class="p_CodeExample"><span class="f_CodeExample">ZoomIndexer.exe&nbsp;-c&nbsp;-o&nbsp;zoom.zcfg</span></p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> I</span>f "stdout" is not redirected to a pipe or file, Zoom will automatically create a console window to display the output. Note also that Zoom will always display a splash screen, even in console mode. We can provide a custom build without the splash screen for developers who have purchased the special distribution license. <span class="f_Tip">Please <a href="contacting_us.htm">contact us</a> for more details.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Redirecting stdout</span></p>
+<p>This can be done programatically (by the software spawning this process) or via the command line with the use of the greater than sign ("&gt;"). eg. redirecting stdout to file:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">ZoomIndexer.exe&nbsp;-c&nbsp;-o&nbsp;zoom.zcfg&nbsp;&gt;&nbsp;output.txt</span></p>
+<p class="p_Heading2"><span class="f_Heading2">Exit codes</span></p>
+<p>The Indexer will also return an exit code indicating the outcome of the indexing. The possible exit codes are:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>0</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Indexer executed successfully.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>1</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Indexing completed with the maximum unique words limit having been reached.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>2</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Indexing completed with the maximum pages limit having been reached.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>3</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Invalid configuration </p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>4</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Indexing failed</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>5</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Writing the index data output failed</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>6</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Report generating failed</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>7</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>FTP upload failed</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="36" style="width:36px;"><p>8</p>
+</td>
+<td valign="top" width="459" style="width:459px;"><p>Installation error</p>
+</td>
+</tr>
+</table>
+</div>
+
+</td></tr></table>
+
+</body>
+</html>

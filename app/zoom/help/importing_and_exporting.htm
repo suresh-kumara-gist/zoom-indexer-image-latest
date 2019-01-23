@@ -1,0 +1,72 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Importing and Exporting additional start URLs</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="importing additional start URLs,exporting additional start URLs,INDEX_AND_FOLLOW,INDEX_AND_FOLLOW_ALL,FOLLOW_ONLY,INDEX_ONLY,USELIMIT" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?importing_and_exporting.htm"; }
+  else { parent.quicksync('a7.3'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Importing and Exporting additional start URLs</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="translating_the_search_page.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="editing_the_search_script.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>In spider mode, you can import additional spider URLs from a text file by clicking on the <span style="font-style: italic;">Import</span> button and specifying its filename. The following is an example of a text file that can be imported by this feature.</p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://news.mysite.com/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.myalternativesite.com/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.mysite.com/spider_sitemap.html</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.friends_site.com/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>These URLs will be imported into the list and given the default option of “index and follow”.</p>
+<p>It can also import from a list of URLs with comma-separated values to specify the indexing option of that URL. The format for this advanced import list is as follows:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;URL&gt;,&nbsp;&lt;URL&nbsp;option&gt;,&nbsp;[&lt;base&nbsp;URL&gt;&nbsp;[,&nbsp;LIMIT=&lt;limit&gt;]&nbsp;[,&nbsp;WEIGHT=&lt;weight&gt;]&nbsp;]</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>The following is an example list in the above specified format:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://news.mysite.com/,&nbsp;INDEX_AND_FOLLOW</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.myalternativesite.com/,&nbsp;INDEX_AND_FOLLOW</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.othersite.com/,&nbsp;INDEX_AND_FOLLOW,&nbsp;http://pages.othersite.com/</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.mysite.com/spider_sitemap.html,&nbsp;FOLLOW_ONLY</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.myschool.edu/bob/index.html,&nbsp;INDEX_AND_FOLLOW,&nbsp;http://www.myschool.edu/,&nbsp;LIMIT=50,&nbsp;WEIGHT=-2</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">http://www.friends_site.com/,&nbsp;INDEX_ONLY</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>The URL options available correspond to the “Advanced Spider URL options” described in section 2.1.4 as follows:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>INDEX_AND_FOLLOW: Index page and follow links (default)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>INDEX_AND_FOLLOW_ALL: Index page and follow all links</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>INDEX_ONLY: Index single page only</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>FOLLOW_ONLY: Follow links only</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>FOLLOW_ALL: Follow all links on this page only</td></tr></table></div><p>See "<a href="start_spider_url.htm">Start spider URL</a>" for more details on each of these options.</p>
+<p>The LIMIT= flag must be followed by a value specifying a restriction on the maximum number of files to index for a particular start point. This is the same setting as the one which you can specify on the "<a href="start_spider_url.htm">Advanced Spider URL options</a>" window.</p>
+<p>The WEIGHT= flag must be followed by a value which specifies the boosting or indexing weighting for the pages under this start point. This should be a value between +5 and -5 similar to the PAGEBOOST meta value. It is the equivalent of specifying PAGEBOOST meta tags for each of the individual pages that are indexed &nbsp;under the start point in question. See "<a href="weightings.htm">Weightings</a>" for more information.</p>
+<p>You can also export your current list of URLs to a CSV text file by way of the <span style="font-style: italic;">Export</span> button, which will export in the latter layout as given in the above example.</p>
+
+</td></tr></table>
+
+</body>
+</html>

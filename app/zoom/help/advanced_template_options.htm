@@ -1,0 +1,282 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Advanced template options</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?advanced_template_options.htm"; }
+  else { parent.quicksync('a6.7'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Advanced template options</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="how_can_i_add_a_search_form.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="more_how_tos.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p>Zoom now provides advanced template options so you can customize the appearance of your search results outside of what is possible with CSS, and without having to modify the search script. This allows you to customize the location of headings, summary information, search boxes, and more. Simply by placing additional tags in your template file.</p>
+<p>The default <span class="f_CourierFixed">&lt;!--ZOOMSEARCH--&gt;</span> tag will provide the complete standard results layout. This is recommended for users who are happy with the default layout, or who are new to Zoom customizations.</p>
+<div style="text-align: left; text-indent: 0px; border-color: #808080; border-style: solid; border-width: 1px; border-right: none; border-left: none; padding: 0px 0px 0px 0px; margin: 14px 48px 10px 48px;"><table cellspacing="0" cellpadding="2" border="0" style="border: none; border-spacing:0px;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="37" style="width:37px;"><p><img src="lightbulb.gif" width="32" height="32" border="0" alt="lightbulb" style="float:left;margin:0px;"></p>
+</td>
+<td valign="top" width="731" style="width:731px;"><p style="margin: 0px 0px 0px 0px;"><span class="f_Tip" style="font-weight: bold;">Note:</span><span class="f_Tip"> The </span><span class="f_CourierFixed">&lt;!--ZOOMSEARCH--&gt; </span><span class="f_Tip">tag and all of the following template tags are case sensitive. This means you must specify them in uppercase as shown here.</span></p>
+</td>
+</tr>
+</table>
+</div>
+<p>For more advanced users, you can now specify individual elements as necessary and remove the <span class="f_CourierFixed">&lt;!--ZOOMSEARCH--&gt;</span> tag from use. Items can be repeated multiple times or not shown at all.</p>
+<p>For example, one commonly requested feature in the past was to be able to reproduce the "Results Pages: 1 <span style="text-decoration: underline;">2</span> <span style="text-decoration: underline;">3</span> <span style="text-decoration: underline;">Next &gt;&gt;</span>" &nbsp;links at the top of the results. You can do this by simply adding a <span class="f_CourierFixed">&lt;!--ZOOM_SHOW_PAGENUMBERS--&gt;</span> tag before your results.</p>
+<p>Here is a listing of the advanced template tag options available:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p style="text-align: center;"><span style="font-weight: bold;">Template tags in "search_template.html"</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p style="text-align: center;"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_HEADING--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is the search result heading, e.g. "Search results for: cat food"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SUMMARY--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is the summary text at the top of the results, e.g. "x results found"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_CATSUMMARY--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is only available when Categories are enabled. It is a breakdown of the categories that your search results belong to. E.g. "Refine your search by category: &nbsp;News (3) &nbsp; Knowledge base (2) &nbsp; PDF files (10)"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SUGGESTION--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is any spelling suggestion, or tip to search again when there are few results.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_PAGESCOUNT--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is the number of pages of results found. E.g. "x pages of results."</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SORTING--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is the option to switch between "Sort by relevance" and "Sort by date" when sorting by date is enabled in the Indexer.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SEARCHTIME--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is the time taken to perform the search. E.g. "Search took 0.2 seconds"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_RECOMMENDED--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This is the recommended links.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_PAGENUMBERS--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>These are the links to the different pages of results, <br>
+e.g. "Results Pages: 1 <span style="text-decoration: underline;">2</span> <span style="text-decoration: underline;">3</span> <span style="text-decoration: underline;">Next &gt;&gt;</span>"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_RESULTS--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This show the actual search results.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SEARCHFORM--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This produces the default search form. You do not need to use the &lt;!--<span class="f_CourierFixed">ZOOM_SHOW_FORMSTART--&gt;</span> and &lt;!--<span class="f_CourierFixed">ZOOM_SHOW_FORMEND--&gt;</span> tag for this. The single tag itself will create the entire search form for you.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_FORMSTART--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This specifies the start of a search form.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_FORMEND--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>This specifies the end of a search form.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="295" style="width:295px; border: solid 1px #000000;"><p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SEARCHBOX--&gt;</span></p>
+<p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SEARCHBUTTON--&gt;</span></p>
+<p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_RESULTSPERPAGE--&gt;</span></p>
+<p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_MATCHOPTIONS--&gt;</span></p>
+<p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_CATEGORIES--&gt;</span></p>
+<p><span class="f_CourierFixed">&lt;!--ZOOM_SHOW_CUSTOMMETAOPTIONS--&gt;</span></p>
+</td>
+<td valign="top" width="487" style="width:487px; border: solid 1px #000000;"><p>These should be pretty self explanatory. They are the different elements that make up the search form. They must be within the &lt;!--<span class="f_CourierFixed">ZOOM_SHOW_FORMSTART--&gt;</span> and  <span class="f_CourierFixed">&lt;!--ZOOM_SHOW_FORMEND--&gt; </span>tags mentioned above. Use these tags if you want to create a custom search form that is different to the default generated by <br>
+<span class="f_CourierFixed">&lt;!--ZOOM_SHOW_SEARCH_FORM--&gt;</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p class="p_Heading2"><span class="f_Heading2">Advanced template options in JavaScript</span></p>
+<p>The JavaScript version has a very different syntax for the template options, due in nature to the way the JavaScript language works. However, it is possible to configure the layout of most elements in a similar fashion to the other versions as described above.</p>
+<p>By default, your "search.html" page will contain the following line to indicate where you want your search form, and results to appear within your page.</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;script&nbsp;language="JavaScript"&gt;ZoomSearch();&lt;/script&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span><br>
+However,&nbsp;if&nbsp;you&nbsp;wish&nbsp;to&nbsp;specify&nbsp;the&nbsp;individual&nbsp;elements,&nbsp;you&nbsp;will&nbsp;need&nbsp;to&nbsp;remove&nbsp;this&nbsp;line,&nbsp;and&nbsp;insert&nbsp;each&nbsp;element&nbsp;specifically.</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>To do this, first you must insert the following line before any other "Zoom" function call:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;script&nbsp;language="JavaScript"&gt;ZoomInitSearch();&lt;/script&gt;</span></p>
+<p>&nbsp;<br>
+Then after this, you can specify any of the following tags to show the individual elements. </p>
+<p>For a search form, you will need to begin and end it like this:</p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowFormStart();&lt;/script&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowSearchBox();&lt;/script&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowSearchButton();&lt;/script&gt;</span></p>
+<p class="p_CodeExample"><span style="width:48px">&nbsp;</span><span class="f_CodeExample">...</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowFormEnd();&lt;/script&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+<p>Only form elements need to be enclosed in the <span class="f_CourierFixed">ZoomShowFormStart</span> and <span class="f_CourierFixed">ZoomShowFormEnd</span> calls. Everything else only needs to be after the <span class="f_CourierFixed">ZoomInitSearch()</span> line.</p>
+<p>The full list of available "tags" are below:</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table cellspacing="0" cellpadding="0" border="0" style="border: none; border-spacing:0px; border-collapse: collapse;">
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p style="text-align: center;"><span style="font-weight: bold;">Template tags in "search.html"</span><br>
+<span style="font-weight: bold;">for the JavaScript version</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p style="text-align: center;"><span style="font-weight: bold;">Description</span></p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowHeading();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This is the search result heading, e.g. "Search results for: cat food"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowSummary();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This is the summary text at the top of the results, e.g. "x results found"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowCatSummary();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This is only available when Categories are enabled. It is a breakdown of the categories that your search results belong to. E.g. "Refine your search by category: &nbsp;News (3) &nbsp; Knowledge base (2) &nbsp; PDF files (10)"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowPagesCount();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This is the number of pages of results found. E.g. "x pages of results."</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowSort();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This is the option to switch between "Sort by relevance" and "Sort by date" when sorting by date is enabled in the Indexer.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowSearchTime();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This is the time taken to perform the search. E.g. "Search took 0.2 seconds"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowRecommended();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This is the recommended links.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowPageNumbers();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>These are the links to the different pages of results, <br>
+e.g. "Results Pages: 1 <span style="text-decoration: underline;">2</span> <span style="text-decoration: underline;">3</span> <span style="text-decoration: underline;">Next &gt;&gt;</span>"</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowResults();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This show the actual search results.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowSearchForm();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This produces the default search form. You do not need to use the <span class="f_CourierFixed">ZoomShowFormStart()</span> and <span class="f_CourierFixed">ZoomShowFormEnd()</span> tag for this. The single tag itself will create the entire search form for you.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowFormStart();&lt;/script&gt;</span></p>
+<p class="p_CodeExample"><span class="f_CodeExample">&nbsp;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This specifies the start of a search form.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">&lt;script&nbsp;language="JavaScript"&gt;ZoomShowFormEnd();&lt;/script&gt;</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>This specifies the end of a search form.</p>
+</td>
+</tr>
+<tr style="text-align:left;vertical-align:top;">
+<td valign="top" width="440" style="width:440px; border: solid 1px #000000;"><p class="p_CodeExample"><span class="f_CourierFixed">ZoomShowSearchBox();</span></p>
+<p class="p_CodeExample"><span class="f_CourierFixed">ZoomShowSearchButton();</span></p>
+<p class="p_CodeExample"><span class="f_CourierFixed">ZoomShowResultsPerPage();</span></p>
+<p class="p_CodeExample"><span class="f_CourierFixed">ZoomShowMatchOptions();</span></p>
+<p class="p_CodeExample"><span class="f_CourierFixed">ZoomShowCategories();</span></p>
+<p class="p_CodeExample"><span class="f_CourierFixed">ZoomShowMetaFields();</span></p>
+</td>
+<td valign="top" width="430" style="width:430px; border: solid 1px #000000;"><p>These should be pretty self explanatory. They are the different elements that make up the search form. They must be within the <span class="f_CourierFixed">ZoomShowFormStart()</span> and <span class="f_CourierFixed">ZoomShowFormEnd()</span> tags mentioned above. Use these tags if you want to create a custom search form that is different to the default generated by <span class="f_CourierFixed">ZoomShowSearchForm().</span></p>
+<p>&nbsp;</p>
+</td>
+</tr>
+</table>
+</div>
+<p>&nbsp;</p>
+
+</td></tr></table>
+
+</body>
+</html>

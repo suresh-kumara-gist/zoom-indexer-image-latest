@@ -1,0 +1,66 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<!-- saved from url=(0014)about:internet -->
+<head>
+   <title>Installation</title>
+   <meta name="generator" content="Help &amp; Manual" />
+   <meta name="keywords" content="Install" />
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+   <meta http-equiv="Content-Style-Type" content="text/css" />
+   <link type="text/css" href="default.css" rel="stylesheet" />
+<script type="text/javascript" src="helpman_topicinit.js"></script>
+<!-- Redirect browser to frame page if page is not in the content frame. -->
+<script type="text/javascript">
+<!--
+if (location.search.lastIndexOf("toc=0")<=0) {
+  if (parent.frames.length==0) { parent.location.href="index.html?installation_linux.htm"; }
+  else { parent.quicksync('a1.6'); }
+}
+//-->
+</script>
+<script type="text/javascript" src="highlight.js"></script></head>
+<body style="margin: 0px 0px 0px 0px; background: #FFFFFF;" onload="highlight();">
+<div id="hmpopupDiv" style="visibility:hidden; position:absolute; z-index:1000; "></div>
+
+
+<table width="100%" border="0" cellspacing="0" cellpadding="5" bgcolor="#336699">
+  <tr valign="middle">
+    <td align="left">
+      <p class="p_Heading1"><span class="f_Heading1">Installation</span></p>
+
+    </td>
+    <td align="right">
+     <span style="font-size: 9pt">
+     <a href="introduction.htm"><img src="top.gif" border=0 alt="Top"></a>&nbsp;
+     <a href="how_zoom_works.htm"><img src="prev.gif" border=0 alt="Previous"></a>&nbsp;
+     <a href="what_should_i_do_first.htm"><img src="next.gif" border=0 alt="Next"></a>
+     </span>
+    </td>
+  </tr>
+</table>
+
+
+<!-- Placeholder for topic body. -->
+<table width="100%" border="0" cellspacing="0" cellpadding="5"><tr valign="top"><td align="left">
+<p class="p_Heading2"><span class="f_Heading2">Prequisites: </span>Apache, PHP5 and the Apache PHP5 module must be installed and working correctly. Access to the files via the command line is assumed, if you can't access the command line (for example when using shared hosting) it is recommended to create the index locally using the Windows or Mac version. The search scripts to run on a Linux based web server come with all the Zoom versions.</p>
+<div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Un-gzip the downloaded zoom file (gunzip zoom_linux.tar.gz)</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Un-tar the zoom tar file into this folder (tar -xvf &nbsp;zoom_linux.tar), copy the "zoom" folder into the Apache DocumentRoot/htdocs folder, the usual default is /var/www.</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>There is a shell script in the zoom folder, install.sh, that can be run to set all the required permissions, this is not a very secure method as it will set permissions so <span style="font-weight: bold;">all</span> users can access the files. If you know the user that your webserver runs as you can either alter the script or follow the recommended steps below. </td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">1.</span></td><td>Check that permissions are set so the web server can acess all the php files<br>
+chmod a+r *</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">2.</span></td><td>Check that the images folder has read and execute permissions set and that the contents of this folder have read permissions<br>
+chmod -R a+r images<br>
+chmod a+rx images</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">3.</span></td><td>Check that the ZoomEngine executable permissions are set<br>
+chmod a+rx ZoomEngine*</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">4.</span></td><td>Check that &nbsp;default.zcfg, userinfo.dat, .ZoomLogBuffer, .ZoomPageDataBuffer and .key.tmp files have read/write permissions<br>
+chmod a+rw default.zcfg<br>
+chmod a+rw userinfo.dat<br>
+chmod a+rw .ZoomLogBuffer<br>
+chmod a+rw .ZoomPageDataBuffer<br>
+chmod a+rw .key.tmp</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">5.</span></td><td>Check that the "plugins" folder and the executables it contains can also be read and executed<br>
+chmod -R a+rx plugins</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">6.</span></td><td>Check that the "help" folder be read<br>
+chmod -R a+r help</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">7.</span></td><td>Create a "temp" directory in the "zoom" directory and make sure it can be accessed<br>
+mkdir temp<br>
+chmod a+rwx temp</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 24px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="15"><span style="font-size: 10pt; font-family: 'Tahoma'; color: #000000;">8.</span></td><td>Check that the ZoomEngine executable can successfully run on this system by using the "ldd" command and that there are no missing libraries. If ldd reports "not a dynamic executable" you may be trying to execute on a 64bit system with no 32bit libraries sinstalled (Zoom Linux is currently 32bit only). Missing libraries will be reported as "not found".<br>
+ldd ZoomEngine</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Open the zoom_defines.php file (eg /var/www/zoom/zoom_defines.php) in a text editor and check that $EngineExePath points to the location on disk of the ZoomEngine executable (eg /var/www/Zoom/ZoomIndexer) and that $EngineExeDir points to that location minus the executable name (eg /var/www/Zoom/).</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Plugin Installation, some plugins are not packaged with Zoom and need to be installed before using if required. &nbsp; &nbsp; &nbsp;  <br>
+If you want to index WordPerfect files (wpd2txt) you will need to install "libwpd-tools" using your Linux distributions package manager (eg "apt-get install libwpd-tools").</td></tr></table></div><div style="text-align: left; text-indent: 0px; padding: 0px 0px 0px 0px; margin: 0px 0px 10px 0px;"><table border="0" cellpadding="0" cellspacing="0" style="line-height: normal;"><tr style="vertical-align:baseline" valign="baseline"><td width="13"><span style="font-size: 10pt; font-family: 'Arial Unicode MS', 'Lucida Sans Unicode', 'Arial'; color: #000000;">&#8226;</span></td><td>Open a web browser and point to http://localhost/zoom/ZoomIndexer.php and you should see the initial zoom screen displayed.</td></tr></table></div><p><img src="zoom_linux_main.png" width="956" height="1002" border="0" alt="Zoom Linux main window" title="Zoom Linux main window"></p>
+
+</td></tr></table>
+
+</body>
+</html>
